@@ -110,9 +110,111 @@
               </header>
               <h2 class="page-title">Benchmark Funcional de Modelos de Adquirencia</h2>
               <p class="page-objective">Ubicar el modelo propuesto frente a las alternativas existentes y mostrar dónde agrega valor.</p>
-              <figure class="benchmark-figure">
-                <img src="assets/benchmark-comparison.png" alt="Cuadro comparativo entre Stripe, Astra, Adyen y Telered" class="benchmark-figure__image">
-              </figure>
+              <div class="benchmark-board">
+                <table class="benchmark-matrix" aria-label="Cuadro comparativo de modelos de adquirencia">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="benchmark-matrix__corner">Dimensión</th>
+                      <th scope="col" class="benchmark-matrix__brand">
+                        <span class="benchmark-matrix__brand-inner">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/320px-Stripe_Logo%2C_revised_2016.svg.png" width="72" height="18" alt="Stripe" class="benchmark-matrix__logo">
+                          <span class="benchmark-matrix__brand-name">Stripe</span>
+                        </span>
+                      </th>
+                      <th scope="col" class="benchmark-matrix__brand">
+                        <span class="benchmark-matrix__brand-inner">
+                          <img src="https://partner.visa.com/content/dam/gpp/partner-directory/Astra-Mark-Blue-VISA.png" width="72" height="22" alt="Astra" class="benchmark-matrix__logo">
+                          <span class="benchmark-matrix__brand-name">Astra</span>
+                        </span>
+                      </th>
+                      <th scope="col" class="benchmark-matrix__brand">
+                        <span class="benchmark-matrix__brand-inner">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Adyen_Corporate_Logo.svg/240px-Adyen_Corporate_Logo.svg.png" width="72" height="18" alt="Adyen" class="benchmark-matrix__logo">
+                          <span class="benchmark-matrix__brand-name">Adyen</span>
+                        </span>
+                      </th>
+                      <th scope="col" class="benchmark-matrix__brand benchmark-matrix__brand--telered">
+                        <span class="benchmark-matrix__brand-inner">
+                          <img src="https://www.telered.com.pa/wp-content/uploads/2019/11/logo-horizontal-version-1.png" width="88" height="20" alt="Telered" class="benchmark-matrix__logo benchmark-matrix__logo--telered">
+                          <span class="benchmark-matrix__brand-name">Telered</span>
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Rol en el ecosistema</th>
+                      <td>Plataforma global de orquestación de pagos</td>
+                      <td>Infraestructura fintech para movimiento de dinero (A2A)</td>
+                      <td>Adquirente y procesador integral global</td>
+                      <td class="benchmark-matrix__telered">Infraestructura nacional de compensación y switching</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Segmento objetivo</th>
+                      <td>Empresas, startups, marketplaces</td>
+                      <td>Fintechs, desarrolladores, plataformas</td>
+                      <td>Empresas medianas y grandes, corporativos</td>
+                      <td class="benchmark-matrix__telered">Bancos (actual) · Fintechs y empresas (potencial)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Modelo operativo</th>
+                      <td>Plataforma API-first (Payments OS)</td>
+                      <td>Infraestructura API-first especializada en A2A</td>
+                      <td>Modelo full-stack (adquirencia + procesamiento)</td>
+                      <td class="benchmark-matrix__telered">Modelo centralizado de procesamiento interbancario</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Capacidades de integración</th>
+                      <td>APIs, SDKs, webhooks, documentación avanzada</td>
+                      <td>APIs y SDKs para integración directa</td>
+                      <td>APIs empresariales e integraciones propietarias</td>
+                      <td class="benchmark-matrix__telered">Integraciones limitadas, no estandarizadas (actual)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Oferta de productos</th>
+                      <td>Pagos, payouts, issuing, treasury, billing</td>
+                      <td>Transferencias ACH, linking de cuentas, wallets</td>
+                      <td>Adquirencia, POS, e-commerce, omnicanal</td>
+                      <td class="benchmark-matrix__telered">ACH, red Clave, transferencias interbancarias</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Modelo de monetización</th>
+                      <td>Tarifas por transacción + servicios de valor agregado</td>
+                      <td>Tarifas por uso y volumen transaccional</td>
+                      <td>MDR (merchant discount rate) + servicios</td>
+                      <td class="benchmark-matrix__telered">Tarifas por procesamiento y volumen</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Propuesta de valor</th>
+                      <td>Orquestación financiera y experiencia de desarrollador</td>
+                      <td>Acceso programático a cuentas bancarias</td>
+                      <td>Control end-to-end del flujo de pagos</td>
+                      <td class="benchmark-matrix__telered">Conectividad directa con el sistema bancario local</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Cobertura geográfica</th>
+                      <td>Global</td>
+                      <td>Principalmente Estados Unidos</td>
+                      <td>Global</td>
+                      <td class="benchmark-matrix__telered">Panamá</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Posicionamiento frente al usuario final</th>
+                      <td>Infraestructura backend (no visible)</td>
+                      <td>Infraestructura backend</td>
+                      <td>Infraestructura backend</td>
+                      <td class="benchmark-matrix__telered">Infraestructura backend</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Nivel de innovación tecnológica</th>
+                      <td>Alto (líder en APIs financieras)</td>
+                      <td>Alto (especialización en A2A)</td>
+                      <td>Alto (integración vertical)</td>
+                      <td class="benchmark-matrix__telered">Medio (potencial de evolución hacia API-first)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </article>
 
