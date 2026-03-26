@@ -683,6 +683,56 @@ a {
   border-radius: 10px;
 }
 
+/* Página 4: priorizar el cuadro comparativo (evita que fitPageContent lo encoja demasiado) */
+.magazine-page__inner--benchmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 0;
+}
+
+.magazine-page--benchmark .page-head {
+  flex-shrink: 0;
+}
+
+.magazine-page--benchmark .page-kicker {
+  font-size: clamp(1rem, 1.85vw, 1.35rem);
+  letter-spacing: -0.03em;
+}
+
+.magazine-page--benchmark .page-tag {
+  margin-top: 0.08rem;
+  font-size: 0.62rem;
+}
+
+.magazine-page--benchmark .page-title {
+  margin: 0.15rem 0 0.1rem;
+  font-size: clamp(0.95rem, 1.4vw, 1.22rem);
+  line-height: 1.14;
+}
+
+.magazine-page--benchmark .page-objective {
+  margin: 0 0 0.3rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.magazine-page--benchmark .benchmark-figure {
+  flex: 1 1 auto;
+  align-self: stretch;
+  min-height: 0;
+  margin-top: 0;
+  padding: 0.35rem 0.45rem;
+}
+
+.magazine-page--benchmark .benchmark-figure__image {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
 .content-card {
   padding: 0.82rem 0.88rem;
 }
