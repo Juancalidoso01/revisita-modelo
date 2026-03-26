@@ -521,60 +521,130 @@
             </div>
           </article>
 
-          <article class="magazine-page" data-page="9" id="p9" aria-label="Modelo económico">
-            <div class="magazine-page__inner">
+          <article class="magazine-page magazine-page--economics" data-page="9" id="p9" aria-label="Modelo económico">
+            <div class="magazine-page__inner magazine-page__inner--economics">
               <header class="page-head">
                 <div>
                   <p class="page-kicker">09</p>
                   <p class="page-section">4. Modelo de Monetización</p>
                 </div>
-                <p class="page-tag">Principios económicos</p>
+                <p class="page-tag">TAM · SAM · SOM</p>
               </header>
-              <h2 class="page-title">Principios del Modelo Económico</h2>
-              <p class="page-objective">Explicar cómo se genera valor sin fricción comercial ni dependencia de licencias.</p>
-              <section class="content-card">
-                <ul class="bullet-list">
-                  <li>Acceso sin costo a los componentes de integración.</li>
-                  <li>Monetización ligada al volumen transaccional efectivamente generado.</li>
-                  <li>Estructura de costos alineada al uso real del ecosistema.</li>
-                  <li>Comparabilidad con esquemas de adquirencia ya conocidos por la banca.</li>
-                </ul>
-              </section>
+              <h2 class="page-title page-title--compact">Modelo económico: tamaño de mercado y captura potencial</h2>
+              <p class="page-objective page-objective--tight">La oportunidad se entiende en tres niveles: mercado total, mercado accesible vía API / A2A y porción capturable en un horizonte de 3 a 5 años.</p>
+
+              <div class="economics-layout">
+                <section class="market-pyramid" aria-label="Pirámide TAM SAM SOM">
+                  <article class="market-tier market-tier--tam">
+                    <p class="market-tier__eyebrow">TAM</p>
+                    <h3 class="market-tier__title">Mercado total de pagos</h3>
+                    <p class="market-tier__value">USD 80B – 120B</p>
+                    <p class="market-tier__meta">Tarjetas, ACH, recaudos</p>
+                  </article>
+                  <div class="market-pyramid__arrow" aria-hidden="true">▼</div>
+                  <article class="market-tier market-tier--sam">
+                    <p class="market-tier__eyebrow">SAM</p>
+                    <h3 class="market-tier__title">Mercado accesible (API / A2A)</h3>
+                    <p class="market-tier__value">USD 15B – 25B</p>
+                    <p class="market-tier__meta">150M – 300M transacciones</p>
+                    <p class="market-tier__note">Fintechs, payroll, utilities, marketplaces y recaudos</p>
+                  </article>
+                  <div class="market-pyramid__arrow" aria-hidden="true">▼</div>
+                  <article class="market-tier market-tier--som">
+                    <p class="market-tier__eyebrow">SOM</p>
+                    <h3 class="market-tier__title">Mercado capturable (3–5 años)</h3>
+                    <p class="market-tier__value">5% – 10% del SAM</p>
+                    <p class="market-tier__meta">USD 1B – 2.5B volumen</p>
+                    <p class="market-tier__note">Ingresos estimados: USD 5M – 15M</p>
+                  </article>
+                </section>
+
+                <section class="economics-sidebar">
+                  <article class="highlight-card economics-highlight">
+                    <p class="highlight-card__label">Lectura estratégica</p>
+                    <p class="highlight-card__text">La tesis económica no depende de capturar todo el mercado, sino de concentrarse en el tramo accesible donde la API reduce fricción, acelera adopción y gana volumen.</p>
+                  </article>
+                  <article class="mini-card mini-card--accent">
+                    <h3 class="mini-card__title">Principio</h3>
+                    <p class="mini-card__text">El esquema debe privilegiar alta adopción y escalabilidad transaccional, manteniendo un costo competitivo frente a las tarjetas.</p>
+                  </article>
+                  <article class="mini-card">
+                    <h3 class="mini-card__title">Implicación</h3>
+                    <p class="mini-card__text">El valor se construye sobre uso recurrente, penetración de segmentos y estandarización operativa, no sobre licencias de entrada.</p>
+                  </article>
+                </section>
+              </div>
+
               <aside class="message-box">
                 <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">El ingreso está alineado al crecimiento del ecosistema, no a licencias.</p>
+                <p class="message-box__text">Existe una franja de mercado suficientemente grande y accesible para construir un modelo rentable con foco en API, A2A y alto volumen transaccional.</p>
               </aside>
             </div>
           </article>
 
-          <article class="magazine-page" data-page="10" id="p10" aria-label="Liquidación e ingresos">
-            <div class="magazine-page__inner">
+          <article class="magazine-page magazine-page--pricing" data-page="10" id="p10" aria-label="Pricing e ingresos">
+            <div class="magazine-page__inner magazine-page__inner--pricing">
               <header class="page-head">
                 <div>
                   <p class="page-kicker">10</p>
                   <p class="page-section">4. Modelo de Monetización</p>
                 </div>
-                <p class="page-tag">Liquidación</p>
+                <p class="page-tag">Pricing · ingresos</p>
               </header>
-              <h2 class="page-title">Esquema de Liquidación y Reparto de Ingresos</h2>
-              <p class="page-objective">Dar tranquilidad financiera y regulatoria sobre la asignación de valor entre los participantes.</p>
-              <div class="page-grid">
-                <article class="mini-card">
-                  <h3 class="mini-card__title">Banco</h3>
-                  <p class="mini-card__text">Mantiene la relación económica con el comercio y la responsabilidad regulatoria.</p>
-                </article>
-                <article class="mini-card">
-                  <h3 class="mini-card__title">Esquema</h3>
-                  <p class="mini-card__text">Los cargos se integran al modelo de adquirencia ya conocido por los participantes.</p>
-                </article>
-                <article class="mini-card">
-                  <h3 class="mini-card__title">Participantes</h3>
-                  <p class="mini-card__text">La distribución interna de ingresos se hace con reglas transparentes y simples.</p>
-                </article>
+              <h2 class="page-title page-title--compact">Modelo de pricing propuesto (Telered AaaS)</h2>
+              <p class="page-objective page-objective--tight">El pricing combina fee transaccional, suscripción y servicios de valor agregado para maximizar adopción y construir ingresos recurrentes sostenibles.</p>
+
+              <div class="pricing-grid">
+                <section class="pricing-card pricing-card--primary">
+                  <p class="pricing-card__kicker">1. Fee por transacción</p>
+                  <ul class="pricing-list">
+                    <li><strong>Pagos A2A / ACH:</strong> USD 0.05 – 0.10</li>
+                    <li><strong>Payouts / nómina:</strong> USD 0.03 – 0.08</li>
+                    <li><strong>Recaudos:</strong> 0.1% – 0.25% o USD 0.05 – 0.15</li>
+                  </ul>
+                </section>
+                <section class="pricing-card">
+                  <p class="pricing-card__kicker">2. Suscripción</p>
+                  <ul class="pricing-list">
+                    <li><strong>Clientes estándar:</strong> USD 200 – 500 / mes</li>
+                    <li><strong>Clientes empresariales:</strong> USD 500 – 1,500 / mes</li>
+                  </ul>
+                </section>
+                <section class="pricing-card">
+                  <p class="pricing-card__kicker">3. Servicios de valor agregado</p>
+                  <ul class="pricing-list">
+                    <li>Conciliación, reportes y orquestación</li>
+                    <li><strong>USD 100 – 500 / mes</strong> adicionales</li>
+                  </ul>
+                </section>
+                <section class="pricing-card pricing-card--principle">
+                  <p class="pricing-card__kicker">Principio</p>
+                  <p class="pricing-card__text">El esquema debe priorizar alta adopción y volumen transaccional, manteniendo costos competitivos frente a alternativas como tarjetas.</p>
+                </section>
               </div>
+
+              <section class="scale-board" aria-label="Escalabilidad del modelo">
+                <div class="scale-board__head">
+                  <p class="highlight-card__label">Escalabilidad del modelo</p>
+                  <p class="scale-board__addon">Ingresos adicionales SaaS + add-ons: <strong>+USD 1M – 2M</strong></p>
+                </div>
+                <article class="scale-row">
+                  <div class="scale-row__bar scale-row__bar--one">
+                    <span>50M transacciones / año</span>
+                  </div>
+                  <p class="scale-row__value">USD 4M aprox.</p>
+                </article>
+                <article class="scale-row">
+                  <div class="scale-row__bar scale-row__bar--two">
+                    <span>100M transacciones / año</span>
+                  </div>
+                  <p class="scale-row__value">USD 8M aprox.</p>
+                </article>
+              </section>
+
               <aside class="message-box">
                 <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">Cada actor captura valor conforme a su rol, sin intermediación financiera adicional.</p>
+                <p class="message-box__text">El modelo se basa en bajo costo por transacción y alto volumen, permitiendo maximizar adopción, evitar fricción comercial y generar ingresos recurrentes sostenibles.</p>
               </aside>
             </div>
           </article>

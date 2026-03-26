@@ -772,6 +772,256 @@ a {
   line-height: 1.32;
 }
 
+/* Páginas 9-10: modelo económico y pricing */
+.magazine-page--economics .page-kicker,
+.magazine-page--pricing .page-kicker {
+  font-size: clamp(1rem, 1.75vw, 1.28rem);
+  letter-spacing: -0.03em;
+}
+
+.magazine-page__inner--economics,
+.magazine-page__inner--pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  min-height: 0;
+}
+
+.economics-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.82fr);
+  gap: 0.55rem;
+  min-height: 0;
+}
+
+.market-pyramid {
+  display: grid;
+  gap: 0.26rem;
+  align-content: start;
+}
+
+.market-pyramid__arrow {
+  justify-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+  opacity: 0.75;
+}
+
+.market-tier {
+  position: relative;
+  justify-self: center;
+  padding: 0.6rem 0.8rem 0.65rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-page);
+  text-align: center;
+}
+
+.market-tier--tam {
+  width: 90%;
+  background: linear-gradient(180deg, rgba(244, 249, 252, 0.98), rgba(255, 255, 255, 0.94));
+}
+
+.market-tier--sam {
+  width: 76%;
+  background: linear-gradient(180deg, rgba(223, 245, 251, 0.92), rgba(255, 255, 255, 0.94));
+}
+
+.market-tier--som {
+  width: 62%;
+  background: linear-gradient(180deg, rgba(11, 46, 79, 0.96), rgba(0, 103, 163, 0.92));
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.market-tier__eyebrow {
+  margin: 0 0 0.18rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.market-tier__title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.18;
+  color: var(--brand-blue-dark);
+}
+
+.market-tier__value {
+  margin: 0.38rem 0 0.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.08;
+  color: var(--brand-blue-dark);
+}
+
+.market-tier__meta,
+.market-tier__note {
+  margin: 0;
+  font-size: 0.62rem;
+  line-height: 1.28;
+  color: var(--muted);
+}
+
+.market-tier__note {
+  margin-top: 0.16rem;
+}
+
+.market-tier--som .market-tier__eyebrow,
+.market-tier--som .market-tier__title,
+.market-tier--som .market-tier__value,
+.market-tier--som .market-tier__meta,
+.market-tier--som .market-tier__note {
+  color: #edf6ff;
+}
+
+.economics-sidebar {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.economics-highlight {
+  padding: 0.88rem 0.92rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  min-height: 0;
+}
+
+.pricing-card {
+  padding: 0.7rem 0.8rem 0.78rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-page);
+}
+
+.pricing-card--primary {
+  background: linear-gradient(180deg, rgba(223, 245, 251, 0.94), rgba(255, 255, 255, 0.96));
+}
+
+.pricing-card--principle {
+  background: linear-gradient(180deg, rgba(244, 249, 252, 0.98), rgba(255, 255, 255, 0.94));
+}
+
+.pricing-card__kicker {
+  margin: 0 0 0.34rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.pricing-card__text {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.34;
+  color: var(--muted);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.pricing-list {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.7rem;
+  line-height: 1.32;
+  color: var(--muted);
+}
+
+.pricing-list li {
+  margin-bottom: 0.22rem;
+}
+
+.pricing-list li:last-child {
+  margin-bottom: 0;
+}
+
+.scale-board {
+  padding: 0.78rem 0.84rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 252, 0.94));
+  box-shadow: var(--shadow-page);
+}
+
+.scale-board__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 0.42rem;
+}
+
+.scale-board__addon {
+  margin: 0;
+  max-width: 13rem;
+  font-size: 0.64rem;
+  line-height: 1.28;
+  text-align: right;
+  color: var(--muted);
+}
+
+.scale-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.scale-row:last-child {
+  margin-bottom: 0;
+}
+
+.scale-row__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 2.05rem;
+  padding: 0.35rem 0.68rem;
+  border-radius: 999px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.scale-row__bar--one {
+  width: 72%;
+  background: linear-gradient(90deg, #00a6c7, #0067a3);
+}
+
+.scale-row__bar--two {
+  width: 100%;
+  background: linear-gradient(90deg, #0b2e4f, #0067a3);
+}
+
+.scale-row__value {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--brand-blue-dark);
+  white-space: nowrap;
+}
+
 .page-layout,
 .page-grid {
   display: grid;
@@ -1568,6 +1818,20 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .economics-layout,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scale-board__head {
+    flex-direction: column;
+  }
+
+  .scale-board__addon {
+    max-width: none;
+    text-align: left;
+  }
+
   .segment-brief__head {
     flex-direction: column;
     align-items: flex-start;
@@ -1654,6 +1918,15 @@ a {
 
   .segment-brief__grid {
     grid-template-columns: 1fr;
+  }
+
+  .scale-row {
+    grid-template-columns: 1fr;
+  }
+
+  .scale-row__bar--one,
+  .scale-row__bar--two {
+    width: 100%;
   }
 }
 
