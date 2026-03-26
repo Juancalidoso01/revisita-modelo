@@ -2094,6 +2094,52 @@ a {
   line-height: 1;
 }
 
+.value-prop-capabilities {
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid rgba(12, 63, 98, 0.12);
+}
+
+.value-prop-capabilities__label {
+  margin: 0 0 0.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.value-prop-capabilities__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.14rem 0.32rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.value-prop-capabilities__grid li {
+  position: relative;
+  margin: 0;
+  padding-left: 0.58rem;
+  font-size: 0.52rem;
+  line-height: 1.2;
+  color: var(--ink);
+  text-align: left;
+}
+
+.value-prop-capabilities__grid li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.04em;
+  font-size: 0.5rem;
+  font-weight: 800;
+  color: var(--brand-cyan);
+  line-height: 1;
+}
+
 .value-prop-insights {
   margin-top: 0.36rem;
   padding-top: 0.4rem;
