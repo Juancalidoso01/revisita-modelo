@@ -566,6 +566,8 @@ a {
   font-size: 0.82rem;
   line-height: 1.48;
   color: rgba(239, 247, 255, 0.88);
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .opening-summary__chips {
@@ -625,6 +627,8 @@ a {
   font-size: 0.8rem;
   line-height: 1.42;
   color: var(--muted);
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .page-layout,
@@ -715,10 +719,16 @@ a {
 }
 
 .mini-card__text {
-  margin: 0;
+  margin: 0 0 0.72rem;
   font-size: 0.74rem;
   line-height: 1.35;
   color: var(--muted);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.mini-card__text:last-child {
+  margin-bottom: 0;
 }
 
 .mini-card--accent {
@@ -748,6 +758,8 @@ a {
   font-size: 0.8rem;
   line-height: 1.34;
   color: var(--brand-blue-dark);
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .magazine-page--closing-spread {
@@ -805,10 +817,15 @@ a {
 }
 
 .credits-list p {
-  margin: 0;
+  margin: 0 0 0.4rem;
   font-size: 0.78rem;
   line-height: 1.45;
   color: rgba(237, 246, 255, 0.9);
+  text-align: justify;
+}
+
+.credits-list p:last-child {
+  margin-bottom: 0;
 }
 
 .closing__eyebrow {
@@ -830,6 +847,8 @@ a {
   color: rgba(237, 246, 255, 0.84);
   line-height: 1.5;
   font-size: 0.92rem;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .closing__meta span {
