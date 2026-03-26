@@ -835,6 +835,64 @@ a {
   margin-top: 0;
 }
 
+/* Página 3: llenar altura útil y repartir el cuerpo del texto (menos hueco abajo) */
+.magazine-page__inner--market {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-height: 0;
+  padding: clamp(0.82rem, 1.5vw, 1.2rem);
+}
+
+.magazine-page--market .page-head {
+  flex-shrink: 0;
+}
+
+.magazine-page--market .page-kicker {
+  font-size: clamp(1rem, 1.85vw, 1.35rem);
+  letter-spacing: -0.03em;
+}
+
+.magazine-page--market .page-tag {
+  margin-top: 0.08rem;
+  font-size: 0.62rem;
+}
+
+.magazine-page--market .page-title {
+  margin: 0.12rem 0 0.2rem;
+  font-size: clamp(1.02rem, 1.5vw, 1.38rem);
+  line-height: 1.12;
+}
+
+.magazine-page--market .page-objective {
+  margin: 0 0 0.28rem;
+  font-size: 0.76rem;
+  line-height: 1.32;
+  flex-shrink: 0;
+}
+
+.magazine-page__inner--market .content-card {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.62rem 0.78rem;
+  margin-top: 0;
+}
+
+.magazine-page__inner--market .content-card .mini-card__text {
+  margin: 0;
+  line-height: 1.38;
+}
+
+.magazine-page__inner--market .message-box {
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding: 0.62rem 0.78rem;
+}
+
 .content-card {
   padding: 0.82rem 0.88rem;
 }
