@@ -10,6 +10,7 @@
   var btnZoomOut = document.getElementById("btnZoomOut");
   var btnZoomReset = document.getElementById("btnZoomReset");
   var btnSound = document.getElementById("btnSound");
+  var pageTurnAudio = document.getElementById("pageTurnAudio");
   var pageLabel = document.getElementById("pageLabel");
   var dotsContainer = document.getElementById("magazineDots");
   var yearEls = document.querySelectorAll("#year");
@@ -21,8 +22,6 @@
   var index = 0;
   var turnTimer = null;
   var soundEnabled = true;
-  var audioContext = null;
-  var audioUnlocked = false;
   var logoUrl = "https://www.telered.com.pa/wp-content/uploads/2019/11/logo-horizontal-version-1.png";
   var zoomLevel = 1;
   var minZoom = 1;
@@ -186,105 +185,25 @@
     );
   }
 
-  function ensureAudioContext() {
-    if (audioContext) return audioContext;
-
-    var AudioContextCtor = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextCtor) return null;
-
-    audioContext = new AudioContextCtor();
-    return audioContext;
-  }
-
   function unlockAudio() {
-    var context = ensureAudioContext();
-    if (!context) return;
-
-    if (context.state === "suspended" && typeof context.resume === "function") {
-      context.resume().then(function () {
-        audioUnlocked = context.state === "running";
-      });
-      return;
-    }
-
-    audioUnlocked = context.state === "running";
+    if (!pageTurnAudio) return;
+    pageTurnAudio.load();
   }
 
-  function playTurnSound(direction) {
+  function playTurnSound() {
     if (!soundEnabled) return;
+    if (!pageTurnAudio) return;
 
-    var context = ensureAudioContext();
-    if (!context) return;
+    try {
+      pageTurnAudio.pause();
+      pageTurnAudio.currentTime = 0;
+      pageTurnAudio.volume = 0.65;
 
-    function triggerSound() {
-      var now = context.currentTime;
-      var duration = 0.18;
-      var buffer = context.createBuffer(
-        1,
-        Math.max(1, Math.floor(context.sampleRate * duration)),
-        context.sampleRate
-      );
-      var data = buffer.getChannelData(0);
-      var shape = direction === "forward" ? 1 : -1;
-
-      for (var i = 0; i < data.length; i++) {
-        var progress = i / data.length;
-        var envelope = Math.pow(1 - progress, 1.6);
-        var grain = 0.92 + 0.24 * shape * (0.5 - progress);
-        data[i] = (Math.random() * 2 - 1) * envelope * grain;
+      var playPromise = pageTurnAudio.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(function () {});
       }
-
-      var noise = context.createBufferSource();
-      noise.buffer = buffer;
-
-      var bandpass = context.createBiquadFilter();
-      bandpass.type = "bandpass";
-      bandpass.frequency.setValueAtTime(direction === "forward" ? 1300 : 980, now);
-      bandpass.Q.setValueAtTime(0.9, now);
-
-      var lowpass = context.createBiquadFilter();
-      lowpass.type = "lowpass";
-      lowpass.frequency.setValueAtTime(2200, now);
-
-      var gain = context.createGain();
-      gain.gain.setValueAtTime(0.0001, now);
-      gain.gain.exponentialRampToValueAtTime(0.11, now + 0.018);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
-
-      var thumpOsc = context.createOscillator();
-      thumpOsc.type = "triangle";
-      thumpOsc.frequency.setValueAtTime(direction === "forward" ? 150 : 128, now);
-      thumpOsc.frequency.exponentialRampToValueAtTime(62, now + 0.12);
-
-      var thumpGain = context.createGain();
-      thumpGain.gain.setValueAtTime(0.0001, now);
-      thumpGain.gain.exponentialRampToValueAtTime(0.03, now + 0.012);
-      thumpGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.12);
-
-      noise.connect(bandpass);
-      bandpass.connect(lowpass);
-      lowpass.connect(gain);
-      gain.connect(context.destination);
-
-      thumpOsc.connect(thumpGain);
-      thumpGain.connect(context.destination);
-
-      noise.start(now);
-      noise.stop(now + duration);
-      thumpOsc.start(now);
-      thumpOsc.stop(now + 0.13);
-    }
-
-    if (context.state === "suspended" && typeof context.resume === "function") {
-      context.resume().then(function () {
-        audioUnlocked = context.state === "running";
-        if (audioUnlocked) triggerSound();
-      });
-      return;
-    }
-
-    audioUnlocked = context.state === "running";
-    if (audioUnlocked) triggerSound();
+    } catch (error) {}
   }
 
   function updateDots() {
@@ -346,7 +265,7 @@
     index = target;
     scheduleTurnFeedback(direction);
     layout();
-    playTurnSound(direction);
+    playTurnSound();
   }
 
   function next() {
