@@ -1026,6 +1026,301 @@ a {
   background: linear-gradient(180deg, rgba(0, 103, 163, 0.06), rgba(223, 245, 251, 0.44));
 }
 
+/* Páginas 13-14: implantación y KPIs */
+.magazine-page--deploy .page-kicker,
+.magazine-page--kpis .page-kicker {
+  font-size: clamp(1rem, 1.75vw, 1.28rem);
+  letter-spacing: -0.03em;
+}
+
+.magazine-page__inner--deploy,
+.magazine-page__inner--kpis {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  min-height: 0;
+}
+
+.deploy-principle {
+  padding: 0.74rem 0.84rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(244, 249, 252, 0.98), rgba(255, 255, 255, 0.94));
+  box-shadow: var(--shadow-page);
+}
+
+.deploy-principle__label {
+  margin: 0 0 0.18rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.deploy-principle__text {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.34;
+  color: var(--brand-blue-dark);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.deploy-timeline {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.deploy-phase {
+  position: relative;
+  padding: 0.68rem 0.78rem 0.74rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-page);
+  overflow: hidden;
+}
+
+.deploy-phase::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--brand-cyan), var(--brand-blue));
+}
+
+.deploy-phase--one {
+  background: linear-gradient(180deg, rgba(244, 249, 252, 0.98), rgba(255, 255, 255, 0.95));
+}
+
+.deploy-phase--two {
+  background: linear-gradient(180deg, rgba(223, 245, 251, 0.92), rgba(255, 255, 255, 0.95));
+}
+
+.deploy-phase--three {
+  background: linear-gradient(180deg, rgba(11, 46, 79, 0.96), rgba(0, 103, 163, 0.92));
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.deploy-phase__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+
+.deploy-phase__index,
+.deploy-phase__range {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.deploy-phase__range {
+  letter-spacing: 0.08em;
+}
+
+.deploy-phase__title {
+  margin: 0.14rem 0 0.24rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.16;
+  color: var(--brand-blue-dark);
+}
+
+.deploy-phase__goal,
+.deploy-phase__text {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.3;
+  color: var(--muted);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.deploy-phase__goal {
+  margin-bottom: 0.34rem;
+}
+
+.deploy-phase__body {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.42rem;
+}
+
+.deploy-phase__label {
+  margin: 0 0 0.14rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.deploy-list {
+  margin: 0;
+  padding-left: 0.95rem;
+  font-size: 0.64rem;
+  line-height: 1.28;
+  color: var(--muted);
+}
+
+.deploy-list li {
+  margin-bottom: 0.16rem;
+}
+
+.deploy-list li:last-child {
+  margin-bottom: 0;
+}
+
+.deploy-phase--three .deploy-phase__index,
+.deploy-phase--three .deploy-phase__range,
+.deploy-phase--three .deploy-phase__title,
+.deploy-phase--three .deploy-phase__goal,
+.deploy-phase--three .deploy-phase__text,
+.deploy-phase--three .deploy-phase__label,
+.deploy-phase--three .deploy-list {
+  color: #edf6ff;
+}
+
+.deploy-keys {
+  padding: 0.74rem 0.82rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 252, 0.94));
+  box-shadow: var(--shadow-page);
+}
+
+.deploy-keys__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.42rem;
+}
+
+.deploy-key {
+  padding: 0.46rem 0.54rem;
+  border-radius: 14px;
+  border: 1px solid rgba(12, 63, 98, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.deploy-key__title {
+  margin: 0 0 0.14rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.64rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--brand-blue-dark);
+}
+
+.deploy-key__text {
+  margin: 0;
+  font-size: 0.64rem;
+  line-height: 1.26;
+  color: var(--muted);
+}
+
+.deploy-message {
+  margin-top: 0.28rem;
+  background: linear-gradient(180deg, rgba(0, 103, 163, 0.06), rgba(223, 245, 251, 0.44));
+}
+
+.kpi-critical {
+  padding: 0.76rem 0.84rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 252, 0.94));
+  box-shadow: var(--shadow-page);
+}
+
+.kpi-critical__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.34rem;
+}
+
+.kpi-pill {
+  padding: 0.5rem 0.42rem;
+  border-radius: 14px;
+  background: rgba(0, 103, 163, 0.06);
+  border: 1px solid rgba(0, 103, 163, 0.1);
+  text-align: center;
+}
+
+.kpi-pill__label {
+  margin: 0 0 0.16rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.kpi-pill__text {
+  margin: 0;
+  font-size: 0.62rem;
+  line-height: 1.2;
+  color: var(--brand-blue-dark);
+}
+
+.kpi-dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.42rem;
+}
+
+.kpi-card {
+  padding: 0.7rem 0.78rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-page);
+}
+
+.kpi-card--accent {
+  background: linear-gradient(180deg, rgba(223, 245, 251, 0.94), rgba(255, 255, 255, 0.96));
+}
+
+.kpi-card__eyebrow {
+  margin: 0 0 0.18rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.kpi-list {
+  margin: 0;
+  padding-left: 0.95rem;
+  font-size: 0.66rem;
+  line-height: 1.28;
+  color: var(--muted);
+}
+
+.kpi-list li {
+  margin-bottom: 0.18rem;
+}
+
+.kpi-list li:last-child {
+  margin-bottom: 0;
+}
+
+.kpi-message {
+  margin-top: 0.28rem;
+  background: linear-gradient(180deg, rgba(0, 103, 163, 0.06), rgba(223, 245, 251, 0.44));
+}
+
 /* Páginas 9-10: modelo económico y pricing */
 .magazine-page--economics .page-kicker,
 .magazine-page--pricing .page-kicker {
@@ -2072,6 +2367,16 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .deploy-phase__body,
+  .deploy-keys__grid,
+  .kpi-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-critical__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .ops-roles,
   .governance-grid {
     grid-template-columns: 1fr;
@@ -2189,6 +2494,10 @@ a {
   }
 
   .ops-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-critical__grid {
     grid-template-columns: 1fr;
   }
 
