@@ -663,7 +663,7 @@ a {
   text-wrap: pretty;
 }
 
-/* Página 7: segmentos + API (contenido denso, mismo sistema de tarjetas) */
+/* Páginas 7-8: spread de segmentos con carriles Dolores / Solución */
 .magazine-page--segments .page-kicker {
   font-size: clamp(1rem, 1.75vw, 1.28rem);
   letter-spacing: -0.03em;
@@ -689,60 +689,126 @@ a {
   min-height: 0;
 }
 
-.segment-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+.segment-showcase {
+  display: grid;
+  gap: 0.42rem;
   min-height: 0;
 }
 
-.segment-card {
-  padding: 0.48rem 0.58rem 0.52rem !important;
+.segment-brief {
+  position: relative;
+  padding: 0.56rem 0.62rem 0.62rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 252, 0.92));
+  box-shadow: var(--shadow-page);
+  overflow: hidden;
 }
 
-.segment-card__heading {
-  margin: 0 0 0.28rem !important;
-  font-size: 0.76rem !important;
-  line-height: 1.2 !important;
+.segment-brief::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--brand-cyan), var(--brand-blue));
+  opacity: 0.95;
 }
 
-.segment-examples {
-  margin: 0 0 0.28rem;
-  font-size: 0.66rem;
-  line-height: 1.3;
+.segment-brief__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+
+.segment-brief__index {
+  margin: 0 0 0.14rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.segment-brief__title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.18;
+  color: var(--brand-blue-dark);
+}
+
+.segment-brief__examples {
+  margin: 0;
+  max-width: 9.5rem;
+  padding: 0.24rem 0.46rem;
+  border-radius: 999px;
+  background: rgba(0, 103, 163, 0.06);
+  border: 1px solid rgba(0, 103, 163, 0.09);
+  font-size: 0.6rem;
+  line-height: 1.2;
+  text-align: right;
   color: var(--muted);
 }
 
-.segment-examples strong {
-  color: var(--brand-blue-dark);
-  font-weight: 700;
+.segment-brief__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.36rem;
 }
 
-.segment-sublabel {
-  margin: 0.28rem 0 0.12rem !important;
-  font-size: 0.62rem !important;
+.segment-lane {
+  min-height: 100%;
+  padding: 0.42rem 0.46rem 0.46rem;
+  border-radius: 12px;
+  border: 1px solid rgba(12, 63, 98, 0.08);
+  background: rgba(255, 255, 255, 0.78);
 }
 
-.segment-examples + .segment-sublabel {
-  margin-top: 0.1rem !important;
+.segment-lane--pain {
+  background: linear-gradient(180deg, rgba(255, 251, 247, 0.94), rgba(255, 255, 255, 0.82));
 }
 
-.bullet-list--compact {
-  font-size: 0.64rem !important;
-  padding-left: 1rem !important;
+.segment-lane--solution {
+  background: linear-gradient(180deg, rgba(241, 249, 252, 0.96), rgba(255, 255, 255, 0.84));
 }
 
-.bullet-list--compact li {
-  margin-bottom: 0.14rem !important;
-  line-height: 1.28 !important;
+.segment-lane__label {
+  margin: 0 0 0.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
 }
 
-.magazine-page--segments .message-box {
+.segment-points {
+  margin: 0;
+  padding-left: 0.9rem;
+  font-size: 0.62rem;
+  line-height: 1.26;
+  color: var(--muted);
+}
+
+.segment-points li {
+  margin-bottom: 0.16rem;
+}
+
+.segment-points li:last-child {
+  margin-bottom: 0;
+}
+
+.segment-executive-box {
   margin-top: 0.4rem;
-  padding: 0.58rem 0.68rem;
+  padding: 0.62rem 0.72rem;
+  background: linear-gradient(180deg, rgba(0, 103, 163, 0.06), rgba(223, 245, 251, 0.44));
 }
 
-.magazine-page--segments .message-box__text {
+.segment-executive-box .message-box__text {
   font-size: 0.74rem;
   line-height: 1.32;
 }
@@ -1542,6 +1608,16 @@ a {
   .page-grid {
     grid-template-columns: 1fr;
   }
+
+  .segment-brief__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .segment-brief__examples {
+    max-width: none;
+    text-align: left;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1615,6 +1691,10 @@ a {
 
   .magazine-dots {
     max-width: min(44vw, 150px);
+  }
+
+  .segment-brief__grid {
+    grid-template-columns: 1fr;
   }
 
   .opening-side-pair {
