@@ -474,6 +474,22 @@
     }
   }
 
+  function bindAssetLayoutRefresh() {
+    var media = document.querySelectorAll("img");
+
+    media.forEach(function (item) {
+      if (item.complete) return;
+      item.addEventListener("load", layout, { passive: true });
+      item.addEventListener("error", layout, { passive: true });
+    });
+
+    window.addEventListener("load", layout, { passive: true });
+
+    if (document.fonts && typeof document.fonts.ready === "object") {
+      document.fonts.ready.then(layout).catch(function () {});
+    }
+  }
+
   function toggleSound() {
     soundEnabled = !soundEnabled;
     updateSoundButton();
@@ -501,6 +517,7 @@
   viewport.addEventListener("touchend", onTouchEnd, { passive: true });
 
   bindResponsiveListener();
+  bindAssetLayoutRefresh();
   injectPageBranding();
   syncYear();
   updateSoundButton();
