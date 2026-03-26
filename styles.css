@@ -663,6 +663,90 @@ a {
   text-wrap: pretty;
 }
 
+/* Página 7: segmentos + API (contenido denso, mismo sistema de tarjetas) */
+.magazine-page--segments .page-kicker {
+  font-size: clamp(1rem, 1.75vw, 1.28rem);
+  letter-spacing: -0.03em;
+}
+
+.page-title--compact {
+  font-size: clamp(0.95rem, 1.35vw, 1.22rem) !important;
+  line-height: 1.14 !important;
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.28rem !important;
+}
+
+.page-objective--tight {
+  margin-bottom: 0.42rem !important;
+  font-size: 0.72rem !important;
+  line-height: 1.3 !important;
+}
+
+.magazine-page__inner--segments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  min-height: 0;
+}
+
+.segment-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-height: 0;
+}
+
+.segment-card {
+  padding: 0.48rem 0.58rem 0.52rem !important;
+}
+
+.segment-card__heading {
+  margin: 0 0 0.28rem !important;
+  font-size: 0.76rem !important;
+  line-height: 1.2 !important;
+}
+
+.segment-examples {
+  margin: 0 0 0.28rem;
+  font-size: 0.66rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.segment-examples strong {
+  color: var(--brand-blue-dark);
+  font-weight: 700;
+}
+
+.segment-sublabel {
+  margin: 0.28rem 0 0.12rem !important;
+  font-size: 0.62rem !important;
+}
+
+.segment-examples + .segment-sublabel {
+  margin-top: 0.1rem !important;
+}
+
+.bullet-list--compact {
+  font-size: 0.64rem !important;
+  padding-left: 1rem !important;
+}
+
+.bullet-list--compact li {
+  margin-bottom: 0.14rem !important;
+  line-height: 1.28 !important;
+}
+
+.magazine-page--segments .message-box {
+  margin-top: 0.4rem;
+  padding: 0.58rem 0.68rem;
+}
+
+.magazine-page--segments .message-box__text {
+  font-size: 0.74rem;
+  line-height: 1.32;
+}
+
 .page-layout,
 .page-grid {
   display: grid;

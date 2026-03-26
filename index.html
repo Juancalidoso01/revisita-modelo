@@ -323,28 +323,127 @@
             </div>
           </article>
 
-          <article class="magazine-page" data-page="7" id="p7" aria-label="Descripción del servicio">
-            <div class="magazine-page__inner">
+          <article class="magazine-page magazine-page--segments" data-page="7" id="p7" aria-label="Segmentos y solución API Telered AaaS">
+            <div class="magazine-page__inner magazine-page__inner--segments">
               <header class="page-head">
                 <div>
                   <p class="page-kicker">07</p>
                   <p class="page-section">3. Características y Funcionalidades</p>
                 </div>
-                <p class="page-tag">Servicio</p>
+                <p class="page-tag">API · AaaS</p>
               </header>
-              <h2 class="page-title">Descripción del Servicio de Adquirencia Digital</h2>
-              <p class="page-objective">Presentar el servicio de forma clara, funcional y no técnica.</p>
-              <section class="content-card">
-                <ul class="bullet-list">
-                  <li>Plataforma de adquirencia basada en APIs y componentes de integración.</li>
-                  <li>Habilitación de pagos digitales como QR, A2A e in-app.</li>
-                  <li>Integración única que permite conexión con múltiples instituciones financieras.</li>
-                  <li>Soporte a distintos modelos de distribución comercial y tecnológica.</li>
-                </ul>
-              </section>
+              <h2 class="page-title page-title--compact">Segmentos, dolores y solución mediante API (Telered AaaS)</h2>
+              <p class="page-objective page-objective--tight">Seis segmentos: fricciones típicas y cómo una integración estandarizada vía API las reduce.</p>
+
+              <div class="segment-stack">
+                <section class="content-card segment-card">
+                  <h3 class="mini-card__title segment-card__heading">1. Fintechs / Wallets / Plataformas de pago</h3>
+                  <p class="segment-examples"><strong>Ejemplos:</strong> Kash, Zinli, Mercado Pago, dLocal</p>
+                  <p class="message-box__label segment-sublabel">Dolores</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Integración compleja con múltiples bancos</li>
+                    <li>Dependencia de acuerdos bilaterales</li>
+                    <li>Acceso limitado a rails locales (ACH)</li>
+                    <li>Dificultad para operar pagos locales (p. ej. cross-border como dLocal)</li>
+                  </ul>
+                  <p class="message-box__label segment-sublabel">Cómo lo soluciona el API</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Integración única estandarizada</li>
+                    <li>Acceso directo a pagos cuenta-a-cuenta (A2A)</li>
+                    <li>Habilitación de pagos locales para players globales (p. ej. dLocal)</li>
+                    <li>Lanzamiento ágil de nuevos productos financieros</li>
+                  </ul>
+                </section>
+
+                <section class="content-card segment-card">
+                  <h3 class="mini-card__title segment-card__heading">2. Payroll / BPO / Empresas de nómina</h3>
+                  <p class="segment-examples"><strong>Ejemplos:</strong> PayDay, empresas de outsourcing</p>
+                  <p class="message-box__label segment-sublabel">Dolores</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Procesos manuales de pago</li>
+                    <li>Conciliación compleja</li>
+                    <li>Riesgo operativo en pagos masivos</li>
+                  </ul>
+                  <p class="message-box__label segment-sublabel">Cómo lo soluciona el API</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Automatización de pagos masivos</li>
+                    <li>Integración directa con cuentas bancarias</li>
+                    <li>Confirmaciones y conciliación en tiempo real</li>
+                  </ul>
+                </section>
+
+                <section class="content-card segment-card">
+                  <h3 class="mini-card__title segment-card__heading">3. Marketplaces / Plataformas digitales</h3>
+                  <p class="segment-examples"><strong>Ejemplos:</strong> Encuentra24, Degusta</p>
+                  <p class="message-box__label segment-sublabel">Dolores</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Dificultad para cobrar y pagar a terceros</li>
+                    <li>Dependencia de efectivo o transferencias manuales</li>
+                    <li>Falta de infraestructura de payouts</li>
+                  </ul>
+                  <p class="message-box__label segment-sublabel">Cómo lo soluciona el API</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Cobros digitales (QR, links, A2A)</li>
+                    <li>Pagos automatizados a usuarios</li>
+                    <li>Escalabilidad operativa</li>
+                  </ul>
+                </section>
+
+                <section class="content-card segment-card">
+                  <h3 class="mini-card__title segment-card__heading">4. Utilities / Recaudos masivos</h3>
+                  <p class="segment-examples"><strong>Ejemplos:</strong> ENSA, Naturgy, IDAAN</p>
+                  <p class="message-box__label segment-sublabel">Dolores</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Altos costos de recaudo</li>
+                    <li>Dependencia de canales físicos</li>
+                    <li>Baja digitalización</li>
+                  </ul>
+                  <p class="message-box__label segment-sublabel">Cómo lo soluciona el API</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Cobros directos desde cuenta bancaria</li>
+                    <li>Automatización de recaudos</li>
+                    <li>Reducción de costos operativos</li>
+                  </ul>
+                </section>
+
+                <section class="content-card segment-card">
+                  <h3 class="mini-card__title segment-card__heading">5. Educación (colegios y universidades)</h3>
+                  <p class="segment-examples"><strong>Ejemplos:</strong> Universidad Latina de Panamá, Universidad del Istmo</p>
+                  <p class="message-box__label segment-sublabel">Dolores</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Procesos manuales de cobro</li>
+                    <li>Conciliación difícil</li>
+                    <li>Morosidad</li>
+                  </ul>
+                  <p class="message-box__label segment-sublabel">Cómo lo soluciona el API</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Pagos automatizados</li>
+                    <li>Conciliación en tiempo real</li>
+                    <li>Mejora en eficiencia de cobranza</li>
+                  </ul>
+                </section>
+
+                <section class="content-card segment-card">
+                  <h3 class="mini-card__title segment-card__heading">6. Retail y comercios</h3>
+                  <p class="segment-examples"><strong>Ejemplos:</strong> Super 99, Riba Smith, Farmacias Arrocha</p>
+                  <p class="message-box__label segment-sublabel">Dolores</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Altos costos de tarjetas</li>
+                    <li>Dependencia de adquirentes tradicionales</li>
+                    <li>Presión en márgenes</li>
+                  </ul>
+                  <p class="message-box__label segment-sublabel">Cómo lo soluciona el API</p>
+                  <ul class="bullet-list bullet-list--compact">
+                    <li>Pagos A2A de menor costo</li>
+                    <li>Alternativas digitales (QR, links)</li>
+                    <li>Reducción de costos de aceptación</li>
+                  </ul>
+                </section>
+              </div>
+
               <aside class="message-box">
-                <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">La plataforma simplifica la integración sin alterar los procesos bancarios existentes.</p>
+                <p class="message-box__label">Mensaje ejecutivo final</p>
+                <p class="message-box__text">La API habilita tanto a actores locales como globales (p. ej. dLocal) a integrarse eficientemente al sistema financiero panameño, resolviendo fricciones operativas, reduciendo costos y permitiendo escalar operaciones de pago de forma estandarizada.</p>
               </aside>
             </div>
           </article>
