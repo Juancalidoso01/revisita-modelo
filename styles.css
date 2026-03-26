@@ -2520,15 +2520,16 @@ a {
     linear-gradient(180deg, rgba(5, 18, 29, 0.48), rgba(5, 18, 29, 0.68)),
     url("https://elbriefingpa.com/assets/telered-1739580447.png");
   background-repeat: no-repeat;
-  background-size: 200% 100%, 200% 100%;
+  /* Capa 1: overlay a página completa. Capa 2: imagen con proporción natural (sin estirar a 200% × 100%). */
+  background-size: 100% 100%, auto 92%;
 }
 
 .magazine-page--thanks-left {
-  background-position: left center, left center;
+  background-position: center, 18% center;
 }
 
 .magazine-page--thanks-right {
-  background-position: right center, right center;
+  background-position: center, 82% center;
 }
 
 .magazine-page--thanks-spread::before {
@@ -2582,7 +2583,6 @@ a {
   margin-left: auto;
 }
 
-.thanks-panel__eyebrow,
 .thanks-contact__eyebrow {
   margin: 0 0 0.4rem;
   font-family: "Montserrat", sans-serif;
