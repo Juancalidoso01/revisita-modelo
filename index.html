@@ -3,184 +3,480 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Revisión de modelo de negocio — Telered</title>
+  <title>Evolución del Modelo de Adquirencia Digital — Telered</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="magazine-chrome" aria-label="Cabecera">
     <div class="magazine-chrome__row">
       <div class="magazine-chrome__brand">
-        <span class="magazine-chrome__logo">Telered</span>
-        <span class="magazine-chrome__tag">Revista digital · Confidencial</span>
+        <span class="magazine-chrome__logo">
+          <img
+            class="magazine-chrome__logo-image"
+            src="https://www.telered.com.pa/wp-content/uploads/2019/11/logo-horizontal-version-1.png"
+            alt="Telered"
+          >
+        </span>
+        <span class="magazine-chrome__tag">Revista digital · Uso interno / confidencial</span>
       </div>
       <div class="magazine-chrome__meta">
-        <span class="magazine-chrome__issue" id="pageLabel" aria-live="polite">1 / 8</span>
+        <span class="magazine-chrome__issue" id="pageLabel" aria-live="polite">1-2 / 16</span>
       </div>
     </div>
   </header>
 
-  <div class="magazine-viewport" id="magazineViewport">
-    <div class="magazine-track" id="magazineTrack" role="region" aria-roledescription="carrusel" aria-label="Páginas de la revista">
-      <!-- Portada -->
-      <article class="magazine-page magazine-page--cover" data-page="1" id="p1">
-        <div class="magazine-page__inner magazine-page__inner--cover">
-          <p class="cover__eyebrow">Presentación ejecutiva</p>
-          <h1 class="cover__title">Innovación que transforma</h1>
-          <p class="cover__subtitle">
-            Nuevo modelo de negocio — alineado con la conexión de Telered con el ecosistema de medios de pago electrónicos en Panamá.
-          </p>
-          <div class="cover__hint">
-            <span class="cover__hint-icon" aria-hidden="true">→</span>
-            Desliza, usa las flechas del teclado o los botones para pasar página
-          </div>
-          <div class="cover__contact">
-            <a href="mailto:negocios@telered.com.pa">negocios@telered.com.pa</a>
-            <span class="cover__sep">·</span>
-            <a href="tel:+5073068000">+507 3068000</a>
-          </div>
-        </div>
-      </article>
+  <main class="magazine-viewport" id="magazineViewport">
+    <section class="magazine-scene">
+      <div class="magazine-book" id="magazineBook" role="region" aria-roledescription="flipbook" aria-label="Revista digital de adquirencia digital Telered">
+        <div class="magazine-track" id="magazineTrack">
+          <article class="magazine-page magazine-page--cover magazine-page--opening-left" data-page="1" id="p1" aria-label="Portada">
+            <div class="magazine-page__inner magazine-page__inner--cover">
+              <div class="cover__masthead">
+                <span class="cover__issue">Presentación ejecutiva</span>
+                <span class="cover__page-no">01</span>
+              </div>
+              <div class="cover__hero">
+                <p class="cover__eyebrow">Proyecto estratégico</p>
+                <h1 class="cover__title">Evolución del Modelo de Adquirencia Digital en Panamá</h1>
+                <p class="cover__subtitle">Plataforma de adquirencia ligera basada en canales digitales bancarios.</p>
+              </div>
+              <div class="cover__feature-list" aria-label="Datos de portada">
+                <span>Telered S.A.</span>
+                <span>Marzo 2026</span>
+                <span>Uso interno / confidencial</span>
+              </div>
+              <div class="cover__footer">
+                <div class="cover__hint">
+                  <span class="cover__hint-icon" aria-hidden="true">→</span>
+                  Usa las flechas, los botones o desliza para pasar página
+                </div>
+                <div class="cover__contact">
+                  <a href="mailto:negocios@telered.com.pa">negocios@telered.com.pa</a>
+                  <span class="cover__sep">·</span>
+                  <a href="tel:+5073068000">+507 306-8000</a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <!-- Contexto -->
-      <article class="magazine-page magazine-page--soft" data-page="2" id="p2">
-        <div class="magazine-page__inner">
-          <p class="page-kicker">02</p>
-          <header class="section-head">
-            <h2 class="section-head__title">Contexto y oportunidad</h2>
-            <p class="section-head__lead">Marco para alinear dirección, operación y crecimiento sostenible.</p>
-          </header>
-          <div class="grid-2">
-            <div class="card">
-              <h3 class="card__title">Situación actual</h3>
-              <p class="card__text">Describa el punto de partida: mercado, posición competitiva y restricciones relevantes para Telered.</p>
+          <article class="magazine-page magazine-page--cover magazine-page--opening-right" data-page="2" id="p2" aria-label="Apertura de portada">
+            <div class="magazine-page__inner magazine-page__inner--opening-side">
+              <div class="opening-summary">
+                <p class="opening-summary__eyebrow">Apertura</p>
+                <h2 class="opening-summary__title">Infraestructura neutral para la siguiente etapa de la adquirencia bancaria</h2>
+                <p class="opening-summary__text">Una propuesta para habilitar aceptación digital de pagos dentro del sistema financiero panameño, sin alterar el rol regulatorio y operativo de los bancos.</p>
+                <div class="opening-summary__chips">
+                  <span>Pagos digitales</span>
+                  <span>Modelo interoperable</span>
+                  <span>Escala bancaria</span>
+                </div>
+              </div>
             </div>
-            <div class="card">
-              <h3 class="card__title">Hipótesis central</h3>
-              <p class="card__text">En una frase: qué cambia con este modelo y por qué ahora es el momento de plantearlo.</p>
-            </div>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- Modelo -->
-      <article class="magazine-page" data-page="3" id="p3">
-        <div class="magazine-page__inner">
-          <p class="page-kicker">03</p>
-          <header class="section-head">
-            <h2 class="section-head__title">Nuevo modelo de negocio</h2>
-            <p class="section-head__lead">Innovar y ofrecer soluciones ágiles y efectivas — adaptado a esta revisión estratégica.</p>
-          </header>
-          <ul class="checklist">
-            <li><strong>Segmentos:</strong> a quién sirve el modelo (personas, empresas, instituciones, comercios, partners).</li>
-            <li><strong>Fuentes de ingreso:</strong> recurrentes, transaccionales, licencias, servicios.</li>
-            <li><strong>Activos clave:</strong> red, datos, marca, relaciones, tecnología.</li>
-            <li><strong>Ecosistema:</strong> SISTEMA Clave, ACH, Mis Pagos Hoy y canales alineados.</li>
-          </ul>
-        </div>
-      </article>
+          <article class="magazine-page" data-page="3" id="p3" aria-label="Benchmark de mercado y tendencias">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">03</p>
+                  <p class="page-section">1. Benchmark</p>
+                </div>
+                <p class="page-tag">Mercado y tendencias</p>
+              </header>
+              <h2 class="page-title">Benchmark de Mercado y Tendencias</h2>
+              <p class="page-objective">El análisis de referentes de infraestructura de pagos evidencia una evolución consistente hacia modelos de adquirencia y aceptación digital basados en integración estandarizada.</p>
+              <section class="content-card">
+                <p class="mini-card__text">El analisis de los principales actores de infraestructura de pagos evidencia una evolucion consistente hacia modelos de adquirencia y aceptacion digital basados en APIs y SDKs. Redes de pago globales, procesadores bancarios e infraestructuras fintech han adoptado enfoques de integracion estandarizada como mecanismo para escalar pagos digitales sin operar directamente la experiencia del usuario final.</p>
+                <p class="mini-card__text">Estos modelos se caracterizan por separar la infraestructura de pagos de la distribucion comercial, habilitando a bancos, fintechs y plataformas a integrar capacidades de adquirencia digital a traves de una unica interfaz tecnica. La monetizacion se realiza principalmente por volumen transaccional, replicando esquemas tradicionales de adquirencia, pero extendidos a canales digitales y sin dependencia de hardware.</p>
+                <p class="mini-card__text">Asimismo, infraestructuras nacionales y regionales han incorporado APIs como base para la interoperabilidad de pagos cuenta-a-cuenta y esquemas QR, reforzando el rol de las plataformas de red como habilitadores del ecosistema.</p>
+                <p class="mini-card__text">En este contexto, el uso de un SDK de adquirencia no representa una innovacion aislada, sino la adopcion del modelo operativo predominante en los sistemas de pago mas avanzados, adaptado a las caracteristicas del mercado local.</p>
+              </section>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El uso de un SDK de adquirencia responde a un patron ya consolidado en infraestructuras de pago avanzadas, adaptado al contexto local.</p>
+              </aside>
+            </div>
+          </article>
 
-      <!-- Valor -->
-      <article class="magazine-page magazine-page--soft" data-page="4" id="p4">
-        <div class="magazine-page__inner">
-          <p class="page-kicker">04</p>
-          <header class="section-head">
-            <h2 class="section-head__title">Propuesta de valor</h2>
-            <p class="section-head__lead">La evolución a tu servicio — clientes, Telered y ejecución.</p>
-          </header>
-          <div class="grid-3">
-            <div class="card card--highlight">
-              <h3 class="card__title">Clientes</h3>
-              <p class="card__text">Beneficio tangible y diferenciación frente a alternativas.</p>
+          <article class="magazine-page" data-page="4" id="p4" aria-label="Benchmark funcional">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">04</p>
+                  <p class="page-section">1. Benchmark</p>
+                </div>
+                <p class="page-tag">Modelos comparados</p>
+              </header>
+              <h2 class="page-title">Benchmark Funcional de Modelos de Adquirencia</h2>
+              <p class="page-objective">Ubicar el modelo propuesto frente a las alternativas existentes y mostrar dónde agrega valor.</p>
+              <div class="page-grid">
+                <article class="mini-card">
+                  <h3 class="mini-card__title">POS tradicional</h3>
+                  <p class="mini-card__text">Amplio alcance histórico, pero con dependencia de hardware y despliegue físico.</p>
+                </article>
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Apps bancarias</h3>
+                  <p class="mini-card__text">Mayor cercanía al usuario, con adquirencia digital integrada dentro del canal del banco.</p>
+                </article>
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Soluciones cerradas</h3>
+                  <p class="mini-card__text">Capturan nichos, pero suelen carecer de interoperabilidad y escala sistémica.</p>
+                </article>
+                <article class="mini-card mini-card--accent">
+                  <h3 class="mini-card__title">Modelo propuesto</h3>
+                  <p class="mini-card__text">Extensión interbancaria y neutral que complementa el modelo existente sin reemplazarlo.</p>
+                </article>
+              </div>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El modelo de adquirencia digital no reemplaza el POS, sino que cubre segmentos no atendidos por el hardware.</p>
+              </aside>
             </div>
-            <div class="card card--highlight">
-              <h3 class="card__title">Telered</h3>
-              <p class="card__text">Impacto en margen, retención y posicionamiento estratégico.</p>
-            </div>
-            <div class="card card--highlight">
-              <h3 class="card__title">Ejecución</h3>
-              <p class="card__text">Producto, operación y cumplimiento listos para escalar.</p>
-            </div>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- Economía -->
-      <article class="magazine-page" data-page="5" id="p5">
-        <div class="magazine-page__inner">
-          <p class="page-kicker">05</p>
-          <header class="section-head">
-            <h2 class="section-head__title">Indicadores y economía</h2>
-            <p class="section-head__lead">Confianza respaldada con innovación — sustituya los guiones por cifras reales.</p>
-          </header>
-          <div class="metrics">
-            <div class="metric">
-              <span class="metric__label">Inversión estimada</span>
-              <span class="metric__value">—</span>
+          <article class="magazine-page" data-page="5" id="p5" aria-label="Propuesta de valor">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">05</p>
+                  <p class="page-section">2. Propuesta de Valor</p>
+                </div>
+                <p class="page-tag">Valor agregado</p>
+              </header>
+              <h2 class="page-title">Propuesta de Valor del Proyecto</h2>
+              <p class="page-objective">Explicar el valor agregado del modelo sin entrar todavía en detalle técnico.</p>
+              <section class="content-card">
+                <ul class="bullet-list">
+                  <li>Habilita nuevos canales de aceptación de pagos con menor fricción de despliegue.</li>
+                  <li>Preserva el rol del banco como adquirente, custodio y contraparte regulada.</li>
+                  <li>Reduce barreras para incorporar comercios que hoy no justifican hardware dedicado.</li>
+                  <li>Monetiza de forma incremental infraestructura ya existente en el ecosistema.</li>
+                </ul>
+              </section>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">La propuesta permite crecer en volumen y cobertura sin incrementar complejidad operativa para la banca.</p>
+              </aside>
             </div>
-            <div class="metric">
-              <span class="metric__label">Horizonte de retorno</span>
-              <span class="metric__value">—</span>
+          </article>
+
+          <article class="magazine-page" data-page="6" id="p6" aria-label="Alcance del modelo">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">06</p>
+                  <p class="page-section">2. Propuesta de Valor</p>
+                </div>
+                <p class="page-tag">Alcance y límites</p>
+              </header>
+              <h2 class="page-title">Alcance del Modelo</h2>
+              <p class="page-objective">Aclarar qué incluye y qué excluye el proyecto para evitar interpretaciones incorrectas.</p>
+              <div class="page-grid">
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Incluye</h3>
+                  <p class="mini-card__text">Enfoque B2B e interinstitucional, uso de canales digitales y wallets bancarias ya existentes.</p>
+                </article>
+                <article class="mini-card">
+                  <h3 class="mini-card__title">No incluye</h3>
+                  <p class="mini-card__text">Relación directa con usuarios finales ni sustitución de productos bancarios actuales.</p>
+                </article>
+                <article class="mini-card mini-card--accent">
+                  <h3 class="mini-card__title">Naturaleza del modelo</h3>
+                  <p class="mini-card__text">Es una capa de infraestructura que habilita, no un producto de consumo.</p>
+                </article>
+              </div>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El proyecto es una capa de infraestructura, no un producto de consumo.</p>
+              </aside>
             </div>
-            <div class="metric">
-              <span class="metric__label">KPI principal</span>
-              <span class="metric__value">—</span>
+          </article>
+
+          <article class="magazine-page" data-page="7" id="p7" aria-label="Descripción del servicio">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">07</p>
+                  <p class="page-section">3. Características y Funcionalidades</p>
+                </div>
+                <p class="page-tag">Servicio</p>
+              </header>
+              <h2 class="page-title">Descripción del Servicio de Adquirencia Digital</h2>
+              <p class="page-objective">Presentar el servicio de forma clara, funcional y no técnica.</p>
+              <section class="content-card">
+                <ul class="bullet-list">
+                  <li>Plataforma de adquirencia basada en APIs y componentes de integración.</li>
+                  <li>Habilitación de pagos digitales como QR, A2A e in-app.</li>
+                  <li>Integración única que permite conexión con múltiples instituciones financieras.</li>
+                  <li>Soporte a distintos modelos de distribución comercial y tecnológica.</li>
+                </ul>
+              </section>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">La plataforma simplifica la integración sin alterar los procesos bancarios existentes.</p>
+              </aside>
             </div>
-          </div>
-          <p class="note">Cifras acordadas con finanzas.</p>
-        </div>
-      </article>
+          </article>
 
-      <!-- Roadmap -->
-      <article class="magazine-page magazine-page--soft" data-page="6" id="p6">
-        <div class="magazine-page__inner">
-          <p class="page-kicker">06</p>
-          <header class="section-head">
-            <h2 class="section-head__title">Roadmap y decisiones</h2>
-            <p class="section-head__lead">Transformación del ecosistema — validación, escala y gobierno.</p>
-          </header>
-          <ol class="timeline">
-            <li><strong>Fase 1 — Validación:</strong> piloto, métricas de éxito, criterios de seguir / pivotar.</li>
-            <li><strong>Fase 2 — Escala:</strong> despliegue, contratos, capacidad operativa.</li>
-            <li><strong>Decisiones para dirección:</strong> aprobaciones, presupuesto, riesgos aceptados.</li>
-          </ol>
-        </div>
-      </article>
+          <article class="magazine-page" data-page="8" id="p8" aria-label="Flujo operativo">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">08</p>
+                  <p class="page-section">3. Características y Funcionalidades</p>
+                </div>
+                <p class="page-tag">Flujo de alto nivel</p>
+              </header>
+              <h2 class="page-title">Flujo Operativo de Alto Nivel</h2>
+              <p class="page-objective">Mostrar que el modelo es simple, controlado y coherente con la operación bancaria existente.</p>
+              <ol class="step-list">
+                <li>Iniciación del pago desde un canal digital habilitado.</li>
+                <li>Enrutamiento a la institución financiera correspondiente.</li>
+                <li>Liquidación directa al comercio dentro del esquema bancario.</li>
+                <li>Confirmación transaccional y conciliación.</li>
+              </ol>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El flujo financiero permanece íntegramente dentro del sistema bancario.</p>
+              </aside>
+            </div>
+          </article>
 
-      <!-- Próximos pasos -->
-      <article class="magazine-page" data-page="7" id="p7">
-        <div class="magazine-page__inner">
-          <p class="page-kicker">07</p>
-          <header class="section-head">
-            <h2 class="section-head__title">Próximos pasos</h2>
-            <p class="section-head__lead">Consolidar la revisión con reuniones, responsables y fecha de seguimiento.</p>
-          </header>
-          <p class="closing__text">
-            También puede exportar a PDF: Archivo → Imprimir → Guardar como PDF (en modo impresión se muestran todas las páginas).
-          </p>
-        </div>
-      </article>
+          <article class="magazine-page" data-page="9" id="p9" aria-label="Modelo económico">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">09</p>
+                  <p class="page-section">4. Modelo de Monetización</p>
+                </div>
+                <p class="page-tag">Principios económicos</p>
+              </header>
+              <h2 class="page-title">Principios del Modelo Económico</h2>
+              <p class="page-objective">Explicar cómo se genera valor sin fricción comercial ni dependencia de licencias.</p>
+              <section class="content-card">
+                <ul class="bullet-list">
+                  <li>Acceso sin costo a los componentes de integración.</li>
+                  <li>Monetización ligada al volumen transaccional efectivamente generado.</li>
+                  <li>Estructura de costos alineada al uso real del ecosistema.</li>
+                  <li>Comparabilidad con esquemas de adquirencia ya conocidos por la banca.</li>
+                </ul>
+              </section>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El ingreso está alineado al crecimiento del ecosistema, no a licencias.</p>
+              </aside>
+            </div>
+          </article>
 
-      <!-- Cierre / contacto -->
-      <article class="magazine-page magazine-page--footer" data-page="8" id="p8">
-        <div class="magazine-page__inner magazine-page__inner--footer">
-          <h2 class="footer-page__title">Telered</h2>
-          <p class="footer-page__line">Panamá Pacífico Boulevard International Business Park, Edificio 3835 (Edif. C), Piso 6</p>
-          <p class="footer-page__line"><a href="tel:+5073068000">+507 306-8000</a></p>
-          <p class="footer-page__line"><a href="mailto:negocios@telered.com.pa">negocios@telered.com.pa</a></p>
-          <p class="footer-page__legal">© <span id="year"></span> TELERED, S.A. · Revisión de modelo de negocio (documento interno)</p>
+          <article class="magazine-page" data-page="10" id="p10" aria-label="Liquidación e ingresos">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">10</p>
+                  <p class="page-section">4. Modelo de Monetización</p>
+                </div>
+                <p class="page-tag">Liquidación</p>
+              </header>
+              <h2 class="page-title">Esquema de Liquidación y Reparto de Ingresos</h2>
+              <p class="page-objective">Dar tranquilidad financiera y regulatoria sobre la asignación de valor entre los participantes.</p>
+              <div class="page-grid">
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Banco</h3>
+                  <p class="mini-card__text">Mantiene la relación económica con el comercio y la responsabilidad regulatoria.</p>
+                </article>
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Esquema</h3>
+                  <p class="mini-card__text">Los cargos se integran al modelo de adquirencia ya conocido por los participantes.</p>
+                </article>
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Participantes</h3>
+                  <p class="mini-card__text">La distribución interna de ingresos se hace con reglas transparentes y simples.</p>
+                </article>
+              </div>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">Cada actor captura valor conforme a su rol, sin intermediación financiera adicional.</p>
+              </aside>
+            </div>
+          </article>
+
+          <article class="magazine-page" data-page="11" id="p11" aria-label="Modelo operativo">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">11</p>
+                  <p class="page-section">5. Estrategia de Implementación</p>
+                </div>
+                <p class="page-tag">Gobernanza</p>
+              </header>
+              <h2 class="page-title">Modelo Operativo y de Gobernanza</h2>
+              <p class="page-objective">Explicar cómo se controla el modelo y cómo se distribuyen responsabilidades.</p>
+              <section class="content-card">
+                <ul class="bullet-list">
+                  <li>Telered actúa como operador de la plataforma y habilitador del esquema.</li>
+                  <li>Los bancos conservan el rol de adquirentes y responsables regulatorios.</li>
+                  <li>Distribuidores tecnológicos participan como canal de activación y adopción.</li>
+                  <li>El modelo se apoya en reglas comunes y criterios homogéneos de participación.</li>
+                </ul>
+              </section>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El modelo refuerza la gobernanza del sistema, no la fragmenta.</p>
+              </aside>
+            </div>
+          </article>
+
+          <article class="magazine-page" data-page="12" id="p12" aria-label="Despliegue progresivo">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">12</p>
+                  <p class="page-section">5. Estrategia de Implementación</p>
+                </div>
+                <p class="page-tag">Despliegue</p>
+              </header>
+              <h2 class="page-title">Estrategia de Despliegue Progresivo</h2>
+              <p class="page-objective">Reducir percepción de riesgo con una ruta de ejecución incremental y controlada.</p>
+              <ol class="step-list">
+                <li>Pilotos controlados con bancos y comercios seleccionados.</li>
+                <li>Evaluación de desempeño, operación y ajustes al modelo.</li>
+                <li>Escalamiento gradual hacia mayor cobertura institucional.</li>
+                <li>Incorporación posterior de funcionalidades adicionales.</li>
+              </ol>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El proyecto se implementa de forma incremental y controlada.</p>
+              </aside>
+            </div>
+          </article>
+
+          <article class="magazine-page" data-page="13" id="p13" aria-label="Indicadores clave">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">13</p>
+                  <p class="page-section">6. KPIs de Éxito</p>
+                </div>
+                <p class="page-tag">Medición</p>
+              </header>
+              <h2 class="page-title">Indicadores Clave de Desempeño</h2>
+              <p class="page-objective">Definir cómo se medirá el éxito del proyecto en adopción, estabilidad y eficiencia.</p>
+              <div class="page-grid">
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Adopción</h3>
+                  <p class="mini-card__text">Instituciones participantes y comercios habilitados sin POS.</p>
+                </article>
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Volumen</h3>
+                  <p class="mini-card__text">Transaccionalidad incremental movilizada por canales digitales.</p>
+                </article>
+                <article class="mini-card">
+                  <h3 class="mini-card__title">Operación</h3>
+                  <p class="mini-card__text">Disponibilidad, estabilidad operativa y costo por transacción.</p>
+                </article>
+              </div>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El éxito se mide por adopción, estabilidad y crecimiento sostenible.</p>
+              </aside>
+            </div>
+          </article>
+
+          <article class="magazine-page" data-page="14" id="p14" aria-label="Roadmap">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">14</p>
+                  <p class="page-section">7. Plan de Trabajo</p>
+                </div>
+                <p class="page-tag">Roadmap</p>
+              </header>
+              <h2 class="page-title">Roadmap de Implementación</h2>
+              <p class="page-objective">Dar claridad temporal sin imponer una rigidez excesiva al proyecto.</p>
+              <ol class="step-list">
+                <li>Diseño del modelo y alineación institucional.</li>
+                <li>Desarrollo del MVP y componentes de integración.</li>
+                <li>Piloto operativo con casos controlados.</li>
+                <li>Escalamiento progresivo en instituciones y comercios.</li>
+              </ol>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje clave</p>
+                <p class="message-box__text">El proyecto prioriza validación temprana antes de expansión.</p>
+              </aside>
+            </div>
+          </article>
+
+          <article class="magazine-page magazine-page--closing-spread magazine-page--closing-left" data-page="15" id="p15" aria-label="Cierre ejecutivo">
+            <div class="magazine-page__inner">
+              <header class="page-head">
+                <div>
+                  <p class="page-kicker">15</p>
+                  <p class="page-section">Cierre Ejecutivo</p>
+                </div>
+                <p class="page-tag">Visión y decisión</p>
+              </header>
+              <h2 class="page-title">Cierre Ejecutivo</h2>
+              <p class="page-objective">Cerrar la historia con visión estratégica y una propuesta clara de próximos pasos.</p>
+              <section class="content-card">
+                <ul class="bullet-list">
+                  <li>Se reafirma el rol estratégico de Telered como habilitador del ecosistema.</li>
+                  <li>La banca obtiene un beneficio sistémico al ampliar cobertura sin alterar su rol.</li>
+                  <li>Los próximos pasos recomendados son validación del modelo y piloto controlado.</li>
+                </ul>
+              </section>
+              <aside class="message-box">
+                <p class="message-box__label">Mensaje final</p>
+                <p class="message-box__text">Esta iniciativa posiciona a Telered como habilitador clave de la próxima etapa de la adquirencia bancaria digital en Panamá.</p>
+              </aside>
+            </div>
+          </article>
+
+          <article class="magazine-page magazine-page--closing magazine-page--closing-spread magazine-page--closing-right" data-page="16" id="p16" aria-label="Créditos y cierre">
+            <div class="magazine-page__inner magazine-page__inner--closing">
+              <p class="closing__eyebrow">Créditos</p>
+              <h2 class="closing__title">Validación, alineación y próximos pasos</h2>
+              <p class="closing__text">Documento de trabajo para revisión ejecutiva, alineación institucional y preparación del piloto.</p>
+              <div class="credits-list">
+                <p><strong>Proyecto:</strong> Evolución del Modelo de Adquirencia Digital</p>
+                <p><strong>Organización:</strong> Telered, S.A.</p>
+                <p><strong>Uso:</strong> Interno / Confidencial</p>
+                <p><strong>Contacto:</strong> negocios@telered.com.pa · +507 306-8000</p>
+              </div>
+              <div class="closing__meta">
+                <span>Panamá</span>
+                <span>Presentación ejecutiva</span>
+                <span>2026</span>
+              </div>
+              <p class="closing__legal">© <span id="year"></span> Telered, S.A. Todos los derechos reservados.</p>
+            </div>
+          </article>
         </div>
-      </article>
-    </div>
-  </div>
+      </div>
+    </section>
+  </main>
 
   <nav class="magazine-controls" aria-label="Navegación de páginas">
     <button type="button" class="magazine-btn magazine-btn--prev" id="btnPrev" aria-label="Página anterior">
       <span aria-hidden="true">‹</span>
     </button>
     <div class="magazine-dots" id="magazineDots" role="tablist" aria-label="Ir a página"></div>
+    <div class="magazine-zoom" aria-label="Controles de zoom">
+      <button type="button" class="magazine-btn magazine-btn--zoom" id="btnZoomOut" aria-label="Reducir zoom">
+        <span aria-hidden="true">−</span>
+      </button>
+      <button type="button" class="magazine-btn magazine-btn--zoom" id="btnZoomReset" aria-label="Restablecer zoom">
+        <span class="magazine-btn__label">100%</span>
+      </button>
+      <button type="button" class="magazine-btn magazine-btn--zoom" id="btnZoomIn" aria-label="Aumentar zoom">
+        <span aria-hidden="true">+</span>
+      </button>
+    </div>
+    <button type="button" class="magazine-btn magazine-btn--sound is-on" id="btnSound" aria-pressed="true" aria-label="Desactivar sonido de página">
+      <span class="magazine-btn__label">SFX</span>
+    </button>
     <button type="button" class="magazine-btn magazine-btn--next" id="btnNext" aria-label="Página siguiente">
       <span aria-hidden="true">›</span>
     </button>
