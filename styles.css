@@ -1775,63 +1775,184 @@ a {
   margin-top: 0;
 }
 
-/* Página 3: llenar altura útil y repartir el cuerpo del texto (menos hueco abajo) */
-.magazine-page__inner--market {
+/* Página 3: propuesta de valor (diseño distinto, misma línea gráfica Telered) */
+.magazine-page__inner--value-prop {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.35rem;
   min-height: 0;
-  padding: clamp(0.82rem, 1.5vw, 1.2rem);
+  padding: clamp(0.78rem, 1.4vw, 1.1rem);
 }
 
-.magazine-page--market .page-head {
+.magazine-page--value-prop .page-head {
   flex-shrink: 0;
 }
 
-.magazine-page--market .page-kicker {
+.magazine-page--value-prop .page-kicker {
   font-size: clamp(1rem, 1.85vw, 1.35rem);
   letter-spacing: -0.03em;
 }
 
-.magazine-page--market .page-tag {
+.magazine-page--value-prop .page-tag {
   margin-top: 0.08rem;
   font-size: 0.62rem;
 }
 
-.magazine-page--market .page-title {
-  margin: 0.12rem 0 0.2rem;
-  font-size: clamp(1.02rem, 1.5vw, 1.38rem);
-  line-height: 1.12;
-}
-
-.magazine-page--market .page-objective {
-  margin: 0 0 0.28rem;
-  font-size: 0.76rem;
-  line-height: 1.32;
+.value-prop-hero {
   flex-shrink: 0;
+  position: relative;
+  padding: 0.62rem 0.72rem 0.68rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(223, 245, 251, 0.55) 48%, rgba(255, 255, 255, 0.94) 100%);
+  box-shadow: var(--shadow-page);
+  overflow: hidden;
 }
 
-.magazine-page__inner--market .content-card {
+.value-prop-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--brand-blue-dark), var(--brand-cyan));
+  border-radius: 14px 0 0 14px;
+}
+
+.value-prop-hero__title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.05rem, 1.55vw, 1.42rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--brand-blue-dark);
+  line-height: 1.08;
+}
+
+.value-prop-hero__subtitle {
+  margin: 0.18rem 0 0.42rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.value-prop-hero__lead {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.36;
+  color: var(--ink);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.value-prop-split {
   flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
   min-height: 0;
+  align-content: stretch;
+}
+
+.value-prop-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.4rem;
-  padding: 0.62rem 0.78rem;
-  margin-top: 0;
+  min-height: 0;
+  padding: 0.52rem 0.58rem 0.56rem 0.72rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-page);
+  background: rgba(255, 255, 255, 0.94);
+  overflow: hidden;
 }
 
-.magazine-page__inner--market .content-card .mini-card__text {
+.value-prop-card__ribbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.value-prop-card--problem .value-prop-card__ribbon {
+  background: linear-gradient(180deg, #0b2e4f, #0067a3);
+}
+
+.value-prop-card--offer .value-prop-card__ribbon {
+  background: linear-gradient(180deg, var(--brand-cyan), #0067a3);
+}
+
+.value-prop-card__title {
+  margin: 0 0 0.38rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-blue-dark);
+}
+
+.value-prop-card__list {
   margin: 0;
-  line-height: 1.34;
+  padding: 0 0 0 1rem;
+  font-size: 0.68rem;
+  line-height: 1.38;
+  color: var(--ink);
+  text-align: left;
 }
 
-.magazine-page__inner--market .message-box {
-  flex-shrink: 0;
-  margin-top: auto;
+.value-prop-card__list li {
+  margin-bottom: 0.28rem;
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.value-prop-card__list li:last-child {
   margin-bottom: 0;
-  padding: 0.62rem 0.78rem;
+}
+
+.value-prop-banks {
+  flex-shrink: 0;
+  padding: 0.52rem 0.68rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 103, 163, 0.2);
+  background: linear-gradient(90deg, rgba(0, 103, 163, 0.09), rgba(0, 166, 199, 0.08));
+  box-shadow: 0 6px 18px rgba(7, 42, 67, 0.06);
+}
+
+.value-prop-banks__label {
+  margin: 0 0 0.32rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.value-prop-banks__text {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.36;
+  color: var(--brand-blue-dark);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.magazine-page__inner--value-prop .message-box--value-prop {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+  padding: 0.55rem 0.72rem;
+}
+
+@media (max-width: 720px) {
+  .value-prop-split {
+    grid-template-columns: 1fr;
+  }
 }
 
 .content-card {
