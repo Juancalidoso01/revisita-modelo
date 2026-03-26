@@ -274,8 +274,8 @@
             </div>
           </article>
 
-          <article class="magazine-page" data-page="6" id="p6" aria-label="Alcance del modelo">
-            <div class="magazine-page__inner">
+          <article class="magazine-page magazine-page--scope" data-page="6" id="p6" aria-label="Alcance del modelo">
+            <div class="magazine-page__inner magazine-page__inner--scope">
               <header class="page-head">
                 <div>
                   <p class="page-kicker">06</p>
@@ -284,25 +284,63 @@
                 <p class="page-tag">Alcance y límites</p>
               </header>
               <h2 class="page-title">Alcance del Modelo</h2>
-              <p class="page-objective">Aclarar qué incluye y qué excluye el proyecto para evitar interpretaciones incorrectas.</p>
-              <div class="page-grid">
-                <article class="mini-card">
-                  <h3 class="mini-card__title">Incluye</h3>
-                  <p class="mini-card__text">Enfoque B2B e interinstitucional, uso de canales digitales y wallets bancarias ya existentes.</p>
+              <p class="page-objective">Naturaleza del modelo, alcance operativo incluido y excluido, y mensaje ejecutivo.</p>
+
+              <div class="scope-stack">
+                <article class="scope-card scope-card--nature">
+                  <h3 class="scope-card__title">
+                    <span class="scope-card__badge" aria-hidden="true">1</span>
+                    Naturaleza
+                  </h3>
+                  <div class="scope-card__body">
+                    <p>El modelo corresponde a una infraestructura tecnológica de integración financiera (API-first) que habilita la conexión entre instituciones financieras y terceros.</p>
+                    <p>Opera como una capa intermedia (middleware), bajo un esquema B2B2C, sin intervenir en la relación financiera entre el banco y el cliente final.</p>
+                  </div>
                 </article>
-                <article class="mini-card">
-                  <h3 class="mini-card__title">No incluye</h3>
-                  <p class="mini-card__text">Relación directa con usuarios finales ni sustitución de productos bancarios actuales.</p>
+
+                <hr class="scope-divider" aria-hidden="true">
+
+                <article class="scope-card scope-card--included">
+                  <h3 class="scope-card__title">
+                    <span class="scope-card__badge" aria-hidden="true">2</span>
+                    Alcance incluido
+                  </h3>
+                  <ul class="scope-list">
+                    <li>Iniciación de pagos cuenta-a-cuenta (A2A)</li>
+                    <li>Transferencias interbancarias (ACH)</li>
+                    <li>Débitos autorizados y request-to-pay</li>
+                    <li>Pagos digitales (QR, links)</li>
+                    <li>Payouts, nómina y recaudos</li>
+                    <li>APIs, SDKs y orquestación de transacciones</li>
+                  </ul>
                 </article>
-                <article class="mini-card mini-card--accent">
-                  <h3 class="mini-card__title">Naturaleza del modelo</h3>
-                  <p class="mini-card__text">Es una capa de infraestructura que habilita, no un producto de consumo.</p>
+
+                <hr class="scope-divider" aria-hidden="true">
+
+                <article class="scope-card scope-card--excluded">
+                  <h3 class="scope-card__title">
+                    <span class="scope-card__badge" aria-hidden="true">3</span>
+                    Alcance excluido
+                  </h3>
+                  <ul class="scope-list">
+                    <li>Custodia de fondos o apertura de cuentas</li>
+                    <li>Emisión de productos financieros</li>
+                    <li>Procesos de cumplimiento (AML/KYC)</li>
+                    <li>Autorización de transacciones</li>
+                    <li>Relación directa con el cliente final</li>
+                  </ul>
+                </article>
+
+                <hr class="scope-divider" aria-hidden="true">
+
+                <article class="scope-card scope-card--key">
+                  <h3 class="scope-card__title scope-card__title--key">
+                    <span class="scope-card__badge scope-card__badge--key" aria-hidden="true">4</span>
+                    Mensaje clave
+                  </h3>
+                  <p class="scope-card__key-text">La solución actúa como habilitador tecnológico del ecosistema financiero, donde los bancos conservan el control de los fondos y las decisiones, mientras la plataforma estandariza e integra la operación entre participantes.</p>
                 </article>
               </div>
-              <aside class="message-box">
-                <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">El proyecto es una capa de infraestructura, no un producto de consumo.</p>
-              </aside>
             </div>
           </article>
 
