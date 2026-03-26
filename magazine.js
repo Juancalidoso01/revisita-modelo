@@ -308,7 +308,25 @@
     applyTrackTransform();
   }
 
+  var touchSwipeArmed = false;
+  var touchStartX = 0;
+  var touchStartY = 0;
+  var suppressBookClickUntil = 0;
+
+  function isTouchOnInteractiveTarget(target) {
+    if (!target || typeof target.closest !== "function") return false;
+    return !!target.closest(
+      "a[href], button, input, textarea, select, [contenteditable='true'], [role='tab']"
+    );
+  }
+
   function onBookClick(event) {
+    if (Date.now() < suppressBookClickUntil) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+
     if (event.target.closest("a, button")) return;
 
     var rect = book.getBoundingClientRect();
@@ -362,27 +380,41 @@
     }
   }
 
-  var touchStartX = 0;
-  var touchStartY = 0;
+  function swipeThresholdPx() {
+    var w = typeof window.innerWidth === "number" ? window.innerWidth : 400;
+    return Math.round(Math.max(40, Math.min(88, w * 0.11)));
+  }
 
   function onTouchStart(event) {
-    if (!event.touches || !event.touches.length) return;
+    touchSwipeArmed = false;
+    if (!event.touches || event.touches.length !== 1) return;
+    if (isTouchOnInteractiveTarget(event.target)) return;
+
+    touchSwipeArmed = true;
     touchStartX = event.touches[0].clientX;
     touchStartY = event.touches[0].clientY;
   }
 
   function onTouchEnd(event) {
+    if (!touchSwipeArmed) return;
+    touchSwipeArmed = false;
     if (!event.changedTouches || !event.changedTouches.length) return;
 
     var touch = event.changedTouches[0];
     var deltaX = touch.clientX - touchStartX;
     var deltaY = touch.clientY - touchStartY;
-    var threshold = 50;
+    var threshold = swipeThresholdPx();
 
-    if (Math.abs(deltaX) <= Math.abs(deltaY)) return;
+    if (Math.abs(deltaX) < threshold) return;
+    if (Math.abs(deltaX) < Math.abs(deltaY) * 1.05) return;
 
-    if (deltaX < -threshold) next();
-    if (deltaX > threshold) prev();
+    suppressBookClickUntil = Date.now() + 480;
+    if (deltaX < 0) next();
+    else prev();
+  }
+
+  function onTouchCancel() {
+    touchSwipeArmed = false;
   }
 
   function handleResponsiveChange() {
@@ -471,6 +503,7 @@
 
   viewport.addEventListener("touchstart", onTouchStart, { passive: true });
   viewport.addEventListener("touchend", onTouchEnd, { passive: true });
+  viewport.addEventListener("touchcancel", onTouchCancel, { passive: true });
 
   bindResponsiveListener();
   bindAssetLayoutRefresh();

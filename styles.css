@@ -112,6 +112,8 @@ a {
   position: fixed;
   inset: var(--chrome-h) 0 var(--controls-h);
   overflow: hidden;
+  /* Menos interferencia del gesto “atrás” del navegador al deslizar en horizontal */
+  overscroll-behavior-x: contain;
 }
 
 .magazine-scene {
@@ -133,6 +135,8 @@ a {
   box-shadow: var(--shadow-book);
   transition: transform 0.45s ease, filter 0.45s ease, box-shadow 0.25s ease;
   cursor: zoom-in;
+  /* Móvil: gestos táctiles más directos; el swipe lo maneja magazine.js */
+  touch-action: manipulation;
 }
 
 .magazine-book.is-zoomed {
@@ -2924,6 +2928,7 @@ a {
     min-height: calc(100vh - var(--chrome-h) - var(--controls-h));
     padding-top: var(--chrome-h);
     padding-bottom: var(--controls-h);
+    overscroll-behavior-x: contain;
   }
 
   .magazine-scene {
