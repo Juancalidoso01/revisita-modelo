@@ -2,3 +2,6 @@
 *.log
 .env
 .env.*
+
+# Metadatos git locales (gitdir separado en esta máquina)
+.git-revisita/
