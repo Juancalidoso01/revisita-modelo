@@ -82,7 +82,6 @@
               <header class="page-head">
                 <div>
                   <p class="page-kicker">03</p>
-                  <p class="page-section">1. Benchmark</p>
                 </div>
                 <p class="page-tag">Mercado y tendencias</p>
               </header>
@@ -106,34 +105,108 @@
               <header class="page-head">
                 <div>
                   <p class="page-kicker">04</p>
-                  <p class="page-section">1. Benchmark</p>
                 </div>
                 <p class="page-tag">Modelos comparados</p>
               </header>
               <h2 class="page-title">Benchmark Funcional de Modelos de Adquirencia</h2>
               <p class="page-objective">Ubicar el modelo propuesto frente a las alternativas existentes y mostrar dónde agrega valor.</p>
-              <div class="page-grid">
-                <article class="mini-card">
-                  <h3 class="mini-card__title">POS tradicional</h3>
-                  <p class="mini-card__text">Amplio alcance histórico, pero con dependencia de hardware y despliegue físico.</p>
-                </article>
-                <article class="mini-card">
-                  <h3 class="mini-card__title">Apps bancarias</h3>
-                  <p class="mini-card__text">Mayor cercanía al usuario, con adquirencia digital integrada dentro del canal del banco.</p>
-                </article>
-                <article class="mini-card">
-                  <h3 class="mini-card__title">Soluciones cerradas</h3>
-                  <p class="mini-card__text">Capturan nichos, pero suelen carecer de interoperabilidad y escala sistémica.</p>
-                </article>
-                <article class="mini-card mini-card--accent">
-                  <h3 class="mini-card__title">Modelo propuesto</h3>
-                  <p class="mini-card__text">Extensión interbancaria y neutral que complementa el modelo existente sin reemplazarlo.</p>
-                </article>
+              <div class="benchmark-table-wrap">
+                <table class="benchmark-table" aria-label="Cuadro comparativo de benchmark">
+                  <thead>
+                    <tr>
+                      <th>Dimension</th>
+                      <th>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/1280px-Stripe_Logo%2C_revised_2016.svg.png" alt="Stripe" class="benchmark-table__logo">
+                        <span>Stripe</span>
+                      </th>
+                      <th>
+                        <img src="https://partner.visa.com/content/dam/gpp/partner-directory/Astra-Mark-Blue-VISA.png" alt="Astra" class="benchmark-table__logo">
+                        <span>Astra</span>
+                      </th>
+                      <th>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSZeKCPwVnEtBEF5ZHLbtDxc6Dc46e8xbuIQ&s" alt="Adyen" class="benchmark-table__logo">
+                        <span>Adyen</span>
+                      </th>
+                      <th>
+                        <img src="https://www.telered.com.pa/wp-content/uploads/2021/06/TELERED-NOSOTROS.jpg" alt="Telered" class="benchmark-table__logo benchmark-table__logo--telered">
+                        <span>Telered (Potencial Evolucion)</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Rol en el ecosistema</th>
+                      <td>Plataforma global de orquestacion de pagos</td>
+                      <td>Infraestructura fintech para movimiento de dinero (A2A)</td>
+                      <td>Adquirente y procesador integral global</td>
+                      <td>Infraestructura nacional de compensacion y switching</td>
+                    </tr>
+                    <tr>
+                      <th>Segmento objetivo</th>
+                      <td>Empresas, startups, marketplaces</td>
+                      <td>Fintechs, desarrolladores, plataformas</td>
+                      <td>Empresas medianas y grandes, corporativos</td>
+                      <td>Bancos (actual) / Fintechs y empresas (potencial)</td>
+                    </tr>
+                    <tr>
+                      <th>Modelo operativo</th>
+                      <td>Plataforma API-first (Payments OS)</td>
+                      <td>Infraestructura API-first especializada en A2A</td>
+                      <td>Modelo full-stack (adquirencia + procesamiento)</td>
+                      <td>Modelo centralizado de procesamiento interbancario</td>
+                    </tr>
+                    <tr>
+                      <th>Capacidades de integracion</th>
+                      <td>APIs, SDKs, webhooks, documentacion avanzada</td>
+                      <td>APIs y SDKs para integracion directa</td>
+                      <td>APIs empresariales e integraciones propietarias</td>
+                      <td>Integraciones limitadas, no estandarizadas (actual)</td>
+                    </tr>
+                    <tr>
+                      <th>Oferta de productos</th>
+                      <td>Pagos, payouts, issuing, treasury, billing</td>
+                      <td>Transferencias ACH, linking de cuentas, wallets</td>
+                      <td>Adquirencia, POS, e-commerce, omnicanal</td>
+                      <td>ACH, red Clave, transferencias interbancarias</td>
+                    </tr>
+                    <tr>
+                      <th>Modelo de monetizacion</th>
+                      <td>Tarifas por transaccion + servicios de valor agregado</td>
+                      <td>Tarifas por uso y volumen transaccional</td>
+                      <td>MDR (merchant discount rate) + servicios</td>
+                      <td>Tarifas por procesamiento y volumen</td>
+                    </tr>
+                    <tr>
+                      <th>Propuesta de valor</th>
+                      <td>Orquestacion financiera y experiencia de desarrollador</td>
+                      <td>Acceso programatico a cuentas bancarias</td>
+                      <td>Control end-to-end del flujo de pagos</td>
+                      <td>Conectividad directa con el sistema bancario local</td>
+                    </tr>
+                    <tr>
+                      <th>Cobertura geografica</th>
+                      <td>Global</td>
+                      <td>Principalmente Estados Unidos</td>
+                      <td>Global</td>
+                      <td>Panama</td>
+                    </tr>
+                    <tr>
+                      <th>Posicionamiento frente al usuario final</th>
+                      <td>Infraestructura backend (no visible)</td>
+                      <td>Infraestructura backend</td>
+                      <td>Infraestructura backend</td>
+                      <td>Infraestructura backend</td>
+                    </tr>
+                    <tr>
+                      <th>Nivel de innovacion tecnologica</th>
+                      <td>Alto (lider en APIs financieras)</td>
+                      <td>Alto (especializacion en A2A)</td>
+                      <td>Alto (integracion vertical)</td>
+                      <td>Medio (potencial de evolucion hacia API-first)</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <aside class="message-box">
-                <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">El modelo de adquirencia digital no reemplaza el POS, sino que cubre segmentos no atendidos por el hardware.</p>
-              </aside>
             </div>
           </article>
 
@@ -148,18 +221,43 @@
               </header>
               <h2 class="page-title">Propuesta de Valor del Proyecto</h2>
               <p class="page-objective">Explicar el valor agregado del modelo sin entrar todavía en detalle técnico.</p>
-              <section class="content-card">
-                <ul class="bullet-list">
-                  <li>Habilita nuevos canales de aceptación de pagos con menor fricción de despliegue.</li>
-                  <li>Preserva el rol del banco como adquirente, custodio y contraparte regulada.</li>
-                  <li>Reduce barreras para incorporar comercios que hoy no justifican hardware dedicado.</li>
-                  <li>Monetiza de forma incremental infraestructura ya existente en el ecosistema.</li>
-                </ul>
+              <section class="flow-diagram" aria-label="Diagrama visual de propuesta de valor">
+                <article class="flow-diagram__node">
+                  <h3 class="flow-diagram__title">Fintechs / Empresas</h3>
+                  <p class="flow-diagram__subtitle">Apps, payroll, marketplaces, comercios</p>
+                  <p class="flow-diagram__link">Integracion via SDK / APIs</p>
+                </article>
+
+                <div class="flow-diagram__connector" aria-hidden="true">
+                  <span class="flow-diagram__line"></span>
+                  <span class="flow-diagram__arrow">▼</span>
+                </div>
+
+                <article class="flow-diagram__node flow-diagram__node--accent">
+                  <h3 class="flow-diagram__title">Telered</h3>
+                  <ul class="flow-diagram__list">
+                    <li>Orquestacion de pagos</li>
+                    <li>Normalizacion de APIs</li>
+                    <li>Enrutamiento de transacciones</li>
+                    <li>Interoperabilidad entre participantes</li>
+                  </ul>
+                </article>
+
+                <div class="flow-diagram__connector" aria-hidden="true">
+                  <span class="flow-diagram__line"></span>
+                  <span class="flow-diagram__arrow">▼</span>
+                </div>
+
+                <article class="flow-diagram__node">
+                  <h3 class="flow-diagram__title">Bancos</h3>
+                  <ul class="flow-diagram__list">
+                    <li>Custodia de fondos</li>
+                    <li>Autorizacion de transacciones</li>
+                    <li>Cumplimiento regulatorio</li>
+                    <li>Ejecucion final del movimiento</li>
+                  </ul>
+                </article>
               </section>
-              <aside class="message-box">
-                <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">La propuesta permite crecer en volumen y cobertura sin incrementar complejidad operativa para la banca.</p>
-              </aside>
             </div>
           </article>
 
