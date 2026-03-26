@@ -5,3 +5,6 @@
 
 # Metadatos git locales (gitdir separado en esta máquina)
 .git-revisita/
+
+# Plantilla de ejemplo (no forma parte de la revista Telered)
+mag-magazine/
