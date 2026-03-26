@@ -772,6 +772,260 @@ a {
   line-height: 1.32;
 }
 
+/* Páginas 11-12: operación y gobernanza */
+.magazine-page--ops .page-kicker,
+.magazine-page--governance .page-kicker {
+  font-size: clamp(1rem, 1.75vw, 1.28rem);
+  letter-spacing: -0.03em;
+}
+
+.magazine-page__inner--ops,
+.magazine-page__inner--governance {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  min-height: 0;
+}
+
+.ops-principle,
+.governance-principle {
+  padding: 0.72rem 0.82rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(244, 249, 252, 0.98), rgba(255, 255, 255, 0.94));
+  box-shadow: var(--shadow-page);
+}
+
+.ops-principle__label,
+.governance-principle__label {
+  margin: 0 0 0.18rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.ops-principle__text,
+.governance-principle__text {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.34;
+  color: var(--brand-blue-dark);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.ops-roles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.ops-role {
+  position: relative;
+  padding: 0.68rem 0.76rem 0.74rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-page);
+  overflow: hidden;
+}
+
+.ops-role::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--brand-cyan), var(--brand-blue));
+  opacity: 0.95;
+}
+
+.ops-role--banks::before {
+  background: linear-gradient(180deg, #0b2e4f, #0067a3);
+}
+
+.ops-role--telered {
+  background: linear-gradient(180deg, rgba(223, 245, 251, 0.94), rgba(255, 255, 255, 0.96));
+}
+
+.ops-role--third-parties::before {
+  background: linear-gradient(180deg, #00a6c7, #0067a3);
+}
+
+.ops-role__eyebrow {
+  margin: 0 0 0.16rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.ops-role__title {
+  margin: 0 0 0.28rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.18;
+  color: var(--brand-blue-dark);
+}
+
+.ops-role__text {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.32;
+  color: var(--muted);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.ops-flow {
+  padding: 0.78rem 0.84rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 252, 0.94));
+  box-shadow: var(--shadow-page);
+}
+
+.ops-flow__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 0.48rem;
+}
+
+.ops-flow__summary {
+  margin: 0;
+  max-width: 12rem;
+  font-size: 0.66rem;
+  line-height: 1.26;
+  text-align: right;
+  color: var(--muted);
+}
+
+.ops-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ops-step {
+  position: relative;
+  padding: 0.48rem 0.48rem 0.52rem;
+  border-radius: 14px;
+  border: 1px solid rgba(12, 63, 98, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.ops-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -0.3rem;
+  transform: translateY(-50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+}
+
+.ops-step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-bottom: 0.26rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0067a3, #00a6c7);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.64rem;
+  font-weight: 800;
+}
+
+.ops-step__text {
+  margin: 0;
+  font-size: 0.66rem;
+  line-height: 1.26;
+  color: var(--muted);
+}
+
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.gov-card {
+  padding: 0.72rem 0.78rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-page);
+}
+
+.gov-card--accent {
+  background: linear-gradient(180deg, rgba(223, 245, 251, 0.94), rgba(255, 255, 255, 0.96));
+}
+
+.gov-card__eyebrow {
+  margin: 0 0 0.22rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.gov-card__text {
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1.32;
+  color: var(--muted);
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.governance-keys {
+  padding: 0.76rem 0.82rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 252, 0.94));
+  box-shadow: var(--shadow-page);
+}
+
+.governance-keys__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+
+.governance-keys__chips span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.58rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 103, 163, 0.12);
+  background: rgba(0, 103, 163, 0.06);
+  font-size: 0.66rem;
+  line-height: 1.24;
+  color: var(--brand-blue-dark);
+}
+
+.governance-message {
+  margin-top: 0.28rem;
+  background: linear-gradient(180deg, rgba(0, 103, 163, 0.06), rgba(223, 245, 251, 0.44));
+}
+
 /* Páginas 9-10: modelo económico y pricing */
 .magazine-page--economics .page-kicker,
 .magazine-page--pricing .page-kicker {
@@ -1818,6 +2072,20 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .ops-roles,
+  .governance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ops-flow__head {
+    flex-direction: column;
+  }
+
+  .ops-flow__summary {
+    max-width: none;
+    text-align: left;
+  }
+
   .economics-layout,
   .pricing-grid {
     grid-template-columns: 1fr;
@@ -1918,6 +2186,18 @@ a {
 
   .segment-brief__grid {
     grid-template-columns: 1fr;
+  }
+
+  .ops-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .ops-step:not(:last-child)::after {
+    content: "↓";
+    top: auto;
+    right: 50%;
+    bottom: -0.72rem;
+    transform: translateX(50%);
   }
 
   .scale-row {

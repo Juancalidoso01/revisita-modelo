@@ -649,52 +649,117 @@
             </div>
           </article>
 
-          <article class="magazine-page" data-page="11" id="p11" aria-label="Modelo operativo">
-            <div class="magazine-page__inner">
+          <article class="magazine-page magazine-page--ops" data-page="11" id="p11" aria-label="Modelo operativo">
+            <div class="magazine-page__inner magazine-page__inner--ops">
               <header class="page-head">
                 <div>
                   <p class="page-kicker">11</p>
-                  <p class="page-section">5. Estrategia de Implementación</p>
+                  <p class="page-section">5. Modelo Operativo y Gobernanza</p>
                 </div>
-                <p class="page-tag">Gobernanza</p>
+                <p class="page-tag">Operación</p>
               </header>
-              <h2 class="page-title">Modelo Operativo y de Gobernanza</h2>
-              <p class="page-objective">Explicar cómo se controla el modelo y cómo se distribuyen responsabilidades.</p>
-              <section class="content-card">
-                <ul class="bullet-list">
-                  <li>Telered actúa como operador de la plataforma y habilitador del esquema.</li>
-                  <li>Los bancos conservan el rol de adquirentes y responsables regulatorios.</li>
-                  <li>Distribuidores tecnológicos participan como canal de activación y adopción.</li>
-                  <li>El modelo se apoya en reglas comunes y criterios homogéneos de participación.</li>
-                </ul>
+              <h2 class="page-title page-title--compact">Modelo Operativo y de Gobernanza – Resumen Ejecutivo</h2>
+              <p class="page-objective page-objective--tight">La operación se sostiene sobre una infraestructura neutral donde Telered integra, el banco controla y la empresa origina la transacción.</p>
+
+              <section class="ops-principle">
+                <p class="ops-principle__label">Principio</p>
+                <p class="ops-principle__text">Telered opera como una infraestructura tecnológica neutral, que habilita la conexión entre bancos y terceros sin intervenir en la custodia de fondos.</p>
               </section>
-              <aside class="message-box">
-                <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">El modelo refuerza la gobernanza del sistema, no la fragmenta.</p>
-              </aside>
+
+              <section class="ops-roles" aria-label="Roles clave del modelo operativo">
+                <article class="ops-role ops-role--banks">
+                  <p class="ops-role__eyebrow">Bancos</p>
+                  <h3 class="ops-role__title">Custodia, autorización y cumplimiento</h3>
+                  <p class="ops-role__text">Mantienen el control financiero, validan la transacción y conservan la responsabilidad regulatoria.</p>
+                </article>
+                <article class="ops-role ops-role--telered">
+                  <p class="ops-role__eyebrow">Telered</p>
+                  <h3 class="ops-role__title">APIs, orquestación e interoperabilidad</h3>
+                  <p class="ops-role__text">Estandariza la integración, enruta la operación y habilita la conexión entre participantes.</p>
+                </article>
+                <article class="ops-role ops-role--third-parties">
+                  <p class="ops-role__eyebrow">Empresas / Fintechs</p>
+                  <h3 class="ops-role__title">Integración y originación de transacciones</h3>
+                  <p class="ops-role__text">Usan la API para iniciar pagos, recaudos o payouts sobre una sola capa técnica.</p>
+                </article>
+              </section>
+
+              <section class="ops-flow" aria-label="Flujo simplificado">
+                <div class="ops-flow__head">
+                  <p class="highlight-card__label">Flujo simplificado</p>
+                  <p class="ops-flow__summary">De la solicitud de empresa a la confirmación bancaria, con Telered como capa de integración.</p>
+                </div>
+                <ol class="ops-steps">
+                  <li class="ops-step">
+                    <span class="ops-step__num">1</span>
+                    <p class="ops-step__text">Empresa inicia transacción vía API</p>
+                  </li>
+                  <li class="ops-step">
+                    <span class="ops-step__num">2</span>
+                    <p class="ops-step__text">Telered enruta y estandariza</p>
+                  </li>
+                  <li class="ops-step">
+                    <span class="ops-step__num">3</span>
+                    <p class="ops-step__text">Banco valida y autoriza</p>
+                  </li>
+                  <li class="ops-step">
+                    <span class="ops-step__num">4</span>
+                    <p class="ops-step__text">Se ejecuta y se confirma la operación</p>
+                  </li>
+                </ol>
+              </section>
             </div>
           </article>
 
-          <article class="magazine-page" data-page="12" id="p12" aria-label="Despliegue progresivo">
-            <div class="magazine-page__inner">
+          <article class="magazine-page magazine-page--governance" data-page="12" id="p12" aria-label="Modelo de gobernanza">
+            <div class="magazine-page__inner magazine-page__inner--governance">
               <header class="page-head">
                 <div>
                   <p class="page-kicker">12</p>
-                  <p class="page-section">5. Estrategia de Implementación</p>
+                  <p class="page-section">5. Modelo Operativo y Gobernanza</p>
                 </div>
-                <p class="page-tag">Despliegue</p>
+                <p class="page-tag">Gobernanza</p>
               </header>
-              <h2 class="page-title">Estrategia de Despliegue Progresivo</h2>
-              <p class="page-objective">Reducir percepción de riesgo con una ruta de ejecución incremental y controlada.</p>
-              <ol class="step-list">
-                <li>Pilotos controlados con bancos y comercios seleccionados.</li>
-                <li>Evaluación de desempeño, operación y ajustes al modelo.</li>
-                <li>Escalamiento gradual hacia mayor cobertura institucional.</li>
-                <li>Incorporación posterior de funcionalidades adicionales.</li>
-              </ol>
-              <aside class="message-box">
-                <p class="message-box__label">Mensaje clave</p>
-                <p class="message-box__text">El proyecto se implementa de forma incremental y controlada.</p>
+              <h2 class="page-title page-title--compact">Gobernanza basada en neutralidad, control bancario y estándares comunes</h2>
+              <p class="page-objective page-objective--tight">La estructura de gobierno distribuye decisiones estratégicas, operación, interoperabilidad y riesgo sin desintermediar a los bancos.</p>
+
+              <section class="governance-principle">
+                <p class="governance-principle__label">Principio</p>
+                <p class="governance-principle__text">Gobernanza basada en neutralidad, control bancario y estándares comunes.</p>
+              </section>
+
+              <section class="governance-grid" aria-label="Estructura de gobernanza">
+                <article class="gov-card">
+                  <p class="gov-card__eyebrow">Comité de Bancos</p>
+                  <p class="gov-card__text">Define reglas del esquema y decisiones estratégicas.</p>
+                </article>
+                <article class="gov-card gov-card--accent">
+                  <p class="gov-card__eyebrow">Telered</p>
+                  <p class="gov-card__text">Opera la plataforma y ejecuta la capa tecnológica.</p>
+                </article>
+                <article class="gov-card">
+                  <p class="gov-card__eyebrow">Comité Técnico</p>
+                  <p class="gov-card__text">Alinea estándares, integraciones e interoperabilidad.</p>
+                </article>
+                <article class="gov-card">
+                  <p class="gov-card__eyebrow">Comité de Riesgo</p>
+                  <p class="gov-card__text">Valida cumplimiento, riesgo operativo y criterios de control.</p>
+                </article>
+              </section>
+
+              <section class="governance-keys" aria-label="Claves del modelo">
+                <p class="highlight-card__label">Claves del modelo</p>
+                <div class="governance-keys__chips">
+                  <span>No desintermedia a los bancos</span>
+                  <span>Mantiene control financiero en las entidades</span>
+                  <span>Habilita interoperabilidad del ecosistema</span>
+                  <span>Reduce fricción y acelera innovación</span>
+                </div>
+              </section>
+
+              <aside class="message-box governance-message">
+                <p class="message-box__label">Mensaje ejecutivo</p>
+                <p class="message-box__text">Telered actúa como la capa de integración del sistema financiero, permitiendo escalar el volumen y los casos de uso sin alterar la estructura ni el control de los bancos.</p>
               </aside>
             </div>
           </article>
