@@ -405,7 +405,18 @@
     }
   }
 
+  function shouldIgnoreFlipbookKeys(event) {
+    if (event.defaultPrevented) return true;
+    var t = event.target;
+    if (!t || typeof t.closest !== "function") return false;
+    return !!t.closest(
+      "button, a[href], input, textarea, select, [contenteditable='true'], [role='tab']"
+    );
+  }
+
   function onKey(event) {
+    if (shouldIgnoreFlipbookKeys(event)) return;
+
     var key = event.key;
 
     if (key === "ArrowRight" || key === "PageDown" || key === " ") {
@@ -499,11 +510,37 @@
     }
   }
 
+  var controlsNav = document.querySelector(".magazine-controls");
+  if (controlsNav) {
+    controlsNav.addEventListener(
+      "click",
+      function (e) {
+        e.stopPropagation();
+      },
+      false
+    );
+  }
+
   if (btnPrev) btnPrev.addEventListener("click", prev);
   if (btnNext) btnNext.addEventListener("click", next);
-  if (btnZoomIn) btnZoomIn.addEventListener("click", zoomIn);
-  if (btnZoomOut) btnZoomOut.addEventListener("click", zoomOut);
-  if (btnZoomReset) btnZoomReset.addEventListener("click", resetZoom);
+  if (btnZoomIn) {
+    btnZoomIn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      zoomIn();
+    });
+  }
+  if (btnZoomOut) {
+    btnZoomOut.addEventListener("click", function (e) {
+      e.stopPropagation();
+      zoomOut();
+    });
+  }
+  if (btnZoomReset) {
+    btnZoomReset.addEventListener("click", function (e) {
+      e.stopPropagation();
+      resetZoom();
+    });
+  }
   if (btnSound) btnSound.addEventListener("click", toggleSound);
 
   window.addEventListener("pointerdown", unlockAudio, { passive: true });

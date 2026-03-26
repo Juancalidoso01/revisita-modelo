@@ -760,7 +760,9 @@ a {
 
 .benchmark-matrix tbody th[scope="row"] {
   padding: 0.32rem 0.42rem;
-  text-align: left;
+  text-align: justify;
+  text-wrap: pretty;
+  hyphens: auto;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 0.95em;
